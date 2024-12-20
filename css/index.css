@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* font import - inter */
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    src: url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format('truetype');
+  }
 
 :root{
 
-    --bg-color: #000;
+    --bg-color: #040704;
 
     --btn-color: #fdfdfd;/* button color*/
-    --btn-bg: #7e22ce;/* button bg color*/
+    --btn-bg: #3cbdba;/* button bg color*/
 
-    --primary-text-color: #7e22ce;
-    --header-link-hover: #7e22ce;
-    --input-hover-bd-color: #7e22ce;
+    --primary-text-color: #6adf78;
+    --header-link-hover: #6adf78;
+    --input-hover-bd-color: #6adf78;
 }
 
 
 html {
     scroll-behavior: smooth;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 header{
@@ -60,8 +65,9 @@ header > .collapsible-header{
 }
 
 .gradient-text{
-    background: rgb(215,215,215);
-    background: linear-gradient(90deg, rgba(215,215,215,1) 18%, rgba(136,136,136,1) 71%);
+    background: #6adf78;
+    background: -webkit-linear-gradient(90deg, #6adf78 0%, #86d9d7 100%);
+    background: linear-gradient(90deg, #6adf78 0%, #86d9d7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -73,6 +79,34 @@ header > .collapsible-header{
     background-size: cover;
 }
 
+#hero-video-overlay {
+    position: absolute;
+    min-width: 100%; 
+    min-height: 100vh; 
+    width: auto; 
+    height: auto;
+    z-index: 0; 
+    background: #040604;
+    background: -webkit-linear-gradient(0deg, #040604 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(0deg, #040604 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    z-index: -1000; 
+    overflow: hidden;
+    object-fit: cover
+}
+
+/* hero img refers to the app screen that is gonna be removed */
 .hero-img-bg-grad{
     background: rgb(126,34,206);
     background: linear-gradient(90deg, #7e22ce91 8%, #625aafae 31%, #7badbbbc 76%, #54d2d0ca 89%);

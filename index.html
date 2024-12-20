@@ -15,7 +15,7 @@
         <meta property="og:title" content="Title of the project" />
         <meta property="og:description" content="" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://github.com/PaulleDemon" />
+        <meta property="og:url" content="https://agentsify.com" />
         <!--Replace with the current website url-->
         <meta property="og:image" content="" />
 
@@ -32,17 +32,18 @@
         />
     </head>
     <body
-        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-black tw-text-white"
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#040604] tw-text-white"
     >
         <header
             class="tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-around"
         >
-            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
+            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px] tw-flex tw-gap-2 tw-items-center" href="">
                 <img
                     src="./assets/logo/logo.png"
                     alt="logo"
                     class="tw-object tw-h-full tw-w-full"
                 />
+                <span class="tw-text-xl tw-text-white"> Agentsify </span>
             </a>
             <div
                 class="collapsible-header animated-collapse max-lg:tw-shadow-md"
@@ -53,21 +54,8 @@
                 >
                     <a class="header-links" href=""> About us </a>
                     <a class="header-links" href="#pricing"> Pricing </a>
-                    <a class="header-links" href=""> Solutions </a>
-                    <a class="header-links" href=""> Features </a>
+                    <a class="header-links" href=""> Services </a>
                     <a class="header-links" href=""> Company </a>
-                </div>
-                <div
-                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
-                >
-                    <a
-                        href=""
-                        aria-label="signup"
-                        class="tw-rounded-full tw-bg-white tw-px-3 tw-py-2 tw-text-black tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
-                    >
-                        <span>Get started</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
                 </div>
             </div>
             <button
@@ -79,9 +67,15 @@
         </header>
 
         <section
-            class="hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-mt-[50px]"
+            class="hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-mt-[50px] tw-z-10"
             id="hero-section"
         >
+            <video autoplay muted loop id="hero-video">
+                <source src="./assets/video/hero-video.mp4" type="video/mp4">
+            </video>
+            <div id="hero-video-overlay">
+
+            </div>
             <div
                 class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
             >
@@ -89,39 +83,40 @@
                     class="tw-flex tw-flex-col tw-place-content-center tw-items-center"
                 >
                     <div
-                        class="reveal-up gradient-text tw-text-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                        class="reveal-up tw-text-center tw-uppercase tw-leading-[80px] max-md:tw-leading-snug max-md:mb-8"
                     >
-                        <span class=""> Ship more </span>
-                        <br />
-                        <span class=""> with SaaS templates </span>
+                        AI solutions approved by 49+ businesses
+                    </div>
+                    <div
+                        class="reveal-up tw-text-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                         What <span class="gradient-text"> AI agent </span> does <br/> <span class="gradient-text"> your business </span> <br/>need?
                     </div>
                     <div
                         class="reveal-up tw-mt-10 tw-max-w-[450px] tw-p-2 tw-text-center tw-text-gray-300 max-lg:tw-max-w-full"
                     >
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit
-                        Lorem ipsum dolor sit amet.
+                        We are building, auditing and consulting advanced AI-based solutions for sophisticated business needs.
                     </div>
 
                     <div
                         class="reveal-up tw-mt-10 tw-flex tw-place-items-center tw-gap-4"
                     >
                         <a
-                            class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
-                            href=""
-                        >
-                            Get started
-                        </a>
-                        <a
                             class="btn tw-flex tw-gap-2 !tw-bg-black !tw-text-white tw-transition-colors tw-duration-[0.3s] hover:!tw-bg-white hover:!tw-text-black"
                             href=""
                         >
-                            <i class="bi bi-play-circle-fill"></i>
-                            <span>Learn more</span>
+                            <span>Discover our services</span>
+                        </a>
+                        <a
+                            class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-[#5fcdca] tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                            href=""
+                        >
+                            Book a call
                         </a>
                     </div>
                 </div>
 
-                <div
+                <!-- <div
                     class="reveal-up tw-relative tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center"
                     id="dashboard-container"
                 >
@@ -139,7 +134,7 @@
                     <div
                         class="hero-img-bg-grad tw-absolute tw-left-[20%] tw-top-5 tw-h-[200px] tw-w-[200px]"
                     ></div>
-                </div>
+                </div> -->
             </div>
         </section>
 
