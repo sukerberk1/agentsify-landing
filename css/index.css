@@ -121,16 +121,26 @@ header > .collapsible-header{
     transition: transform 0.5;
 }
 
+/* cards */
 .border-gradient{
-    background: rgb(219,215,213);
-    background: linear-gradient(180deg, rgba(219,215,213,1) 35%, rgba(214,211,233,0) 71%);
-    /* background-image: linear-gradient(90deg, #7e22ce91 8%, #625aafae 31%, #7badbbbc 76%, #54d2d0ca 89%); */
+    background: #6adf78;
+    background: -webkit-linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
+    background: linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
     padding: 2px;
     border-radius: 10px;
 }
-.border-gradient>div{
+
+.border-gradient > div{
     /* background-color: var(--bg-color); */
     background-color: var(--bg-color);
+    border-radius: inherit;
+}
+
+.card-image-wrapper {
+    border-radius: inherit;
+}
+
+.card-image-wrapper > img {
     border-radius: inherit;
 }
 
@@ -268,3 +278,27 @@ header > .collapsible-header{
     }
     
 }
+
+/* animated border */
+.animated-border {
+    border: 3px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(#131219, #131219) padding-box, linear-gradient(
+          var(--angle),
+          #070707,
+          var(--primary-text-color)
+        ) border-box;
+    animation: 4s rotate linear infinite;
+  }
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
