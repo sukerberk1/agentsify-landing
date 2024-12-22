@@ -15,6 +15,8 @@
     --primary-text-color: #6adf78;
     --header-link-hover: #6adf78;
     --input-hover-bd-color: #6adf78;
+
+    --border-radius: 12px;
 }
 
 
@@ -49,7 +51,7 @@ header > .collapsible-header{
     display: flex;
     align-items: center;
     min-width: fit-content;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px 10px;
     transition: background-color 0.5s, color 0.5s;
 }
@@ -127,21 +129,24 @@ header > .collapsible-header{
     background: -webkit-linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
     background: linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
     padding: 2px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .border-gradient > div{
     /* background-color: var(--bg-color); */
     background-color: var(--bg-color);
-    border-radius: inherit;
+    border-radius: var(--border-radius);
 }
 
 .card-image-wrapper {
-    border-radius: inherit;
+    border-radius: var(--border-radius);
+    background-color: rgb(250,250,250);
+    box-shadow: 0px 0px 3rem 3rem rgb(15, 15, 15, 0.3) inset;
+    margin: 2rem;
 }
 
 .card-image-wrapper > img {
-    border-radius: inherit;
+    border-radius: var(--border-radius);
 }
 
 .opacity-0{
@@ -155,7 +160,7 @@ header > .collapsible-header{
 .btn{
     padding: 10px 15px;
     width: max-content;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     color: var(--btn-color);
     background-color: var(--btn-bg);
     justify-content: center;
@@ -175,7 +180,7 @@ header > .collapsible-header{
 .input{
     padding: 10px;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     /* outline: none; */
     min-width: 100px;
     border: 1px solid #818080;
@@ -282,7 +287,7 @@ header > .collapsible-header{
 /* animated border */
 .animated-border {
     border: 2px solid #0000;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     background: linear-gradient(#131219, #131219) padding-box, linear-gradient(
           var(--angle),
           #070707,

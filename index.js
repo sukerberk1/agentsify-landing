@@ -140,3 +140,13 @@ sections.forEach((sec) => {
 
 
 })
+
+// ------------- lottie animations ---------------
+
+lottie.loadAnimation({
+    container: "#setting-icon", // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: "./assets/icons/animations/setting.json" // the path to the animation json
+  });
