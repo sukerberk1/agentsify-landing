@@ -172,6 +172,50 @@ new ScrollMagic.Scene({
     .addTo(controller);
 
 
+    const items = gsap.utils.toArray(".card");
+    const lastCard = items[items.length - 1];
+    
+    // Calculate the height of the last card
+    let lastCardHeight = lastCard.clientHeight;
+    
+    // Calculate the total offset based on the "animation-item" attribute of each card
+    const totaOffset = parseFloat(lastCard.getAttribute("animation-item")) || 0;
+    
+    // Add the total offset to the height of the last card
+    lastCardHeight += totaOffset;
+    
+    items.forEach((item, index) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top top+=" + item.getAttribute("animation-item"),
+          endTrigger: "#card-animation-end",
+          // Dynamically set the end position based on the total height of all cards
+          end: `bottom top+=${lastCardHeight}px`,
+          pin: true,
+          pinSpacing: false,
+          scrub: true,
+          markers: true
+        }
+      });
+    
+      if (item === lastCard) {
+        // If it's the last card, only scale it
+        tl.to(item, {
+          scale: 0.9 + 0.02 * index,
+          transformOrigin: "center center"
+        });
+      } else {
+        // For other cards, animate both opacity and scale
+        tl.to(item, {
+          opacity: 0.4,
+          scale: 0.9 + 0.02 * index,
+          transformOrigin: "center center"
+        });
+      }
+    });
+    
+
 /** typing animations */
 var typedHero = new Typed('#hero-typed', {
     stringsElement: '#hero-typed-strings',

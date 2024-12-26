@@ -131,11 +131,11 @@ header > .collapsible-header{
     background-attachment: fixed;
 }
 
-.glass-card {
-    background: rgba(0,0,0,0.5);
+.card {
+    background: rgba(10,12,10,0.65);
     -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(0,0,0,0.25);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(159,159,159, 0.35);
     border-radius: var(--border-radius);
 }
 
@@ -179,7 +179,7 @@ header > .collapsible-header{
     opacity: 100 !important;
 }
 
-.btn{
+.btn {
     padding: 10px 15px;
     width: max-content;
     border-radius: var(--border-radius);
