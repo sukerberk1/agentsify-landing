@@ -216,7 +216,7 @@ header > .collapsible-header{
   
 .carousel {
     display: inline-block;
-    animation: scroll 10s linear infinite;
+    animation: scroll 16s linear infinite;
 }
   
 .carousel-img {
@@ -226,10 +226,10 @@ header > .collapsible-header{
   
 @keyframes scroll {
     0% {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
