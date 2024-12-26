@@ -132,9 +132,9 @@ header > .collapsible-header{
 }
 
 .border-gradient{
-    background: #6adf78;
-    background: -webkit-linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
-    background: linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
+    background: #e2e2e2;
+    /* background: -webkit-linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
+    background: linear-gradient(180deg, #6adf78 0%, #86d9d7 100%); */
     padding: 2px;
     border-radius: var(--border-radius);
 }
