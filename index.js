@@ -170,10 +170,20 @@ new ScrollMagic.Scene({
 
 
 /** typing animations */
-var typed = new Typed('#hero-typed', {
+var typedHero = new Typed('#hero-typed', {
     stringsElement: '#hero-typed-strings',
-    typeSpeed: 100,
-    backSpeed: 100,
+    typeSpeed: 50,
+    backSpeed: 50,
+    // showCursor: false,
+    loop: true,
+    backDelay: 2000
+  });
+
+  /** typing animations */
+var typedCardHeader = new Typed('#cards-header-typed', {
+    stringsElement: '#cards-header-typed-strings',
+    typeSpeed: 50,
+    backSpeed: 50,
     // showCursor: false,
     loop: true,
     backDelay: 2000

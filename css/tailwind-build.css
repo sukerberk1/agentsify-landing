@@ -610,11 +610,6 @@ video {
   z-index: 50;
 }
 
-.tw-my-14 {
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
-}
-
 .tw-my-24 {
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -628,12 +623,12 @@ video {
   margin-top: 2.5rem;
 }
 
-.tw-mt-2 {
-  margin-top: 0.5rem;
-}
-
 .tw-mt-20 {
   margin-top: 5rem;
+}
+
+.tw-mt-24 {
+  margin-top: 6rem;
 }
 
 .tw-mt-3 {
@@ -660,12 +655,8 @@ video {
   margin-top: auto;
 }
 
-.tw-mt-16 {
-  margin-top: 4rem;
-}
-
-.tw-mt-24 {
-  margin-top: 6rem;
+.tw-mt-32 {
+  margin-top: 8rem;
 }
 
 .tw-flex {
@@ -680,20 +671,16 @@ video {
   display: none !important;
 }
 
+.tw-aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .tw-h-\[200px\] {
   height: 200px;
 }
 
-.tw-h-\[250px\] {
-  height: 250px;
-}
-
 .tw-h-\[30px\] {
   height: 30px;
-}
-
-.tw-h-\[400px\] {
-  height: 400px;
 }
 
 .tw-h-\[40px\] {
@@ -763,10 +750,6 @@ video {
 
 .tw-w-\[380px\] {
   width: 380px;
-}
-
-.tw-w-\[400px\] {
-  width: 400px;
 }
 
 .tw-w-\[40px\] {
@@ -930,10 +913,6 @@ video {
 
 .tw-overflow-hidden {
   overflow: hidden;
-}
-
-.tw-overflow-clip {
-  overflow: clip;
 }
 
 .\!tw-rounded-full {
@@ -1129,6 +1108,11 @@ video {
   line-height: 1;
 }
 
+.tw-text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .tw-text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1147,11 +1131,6 @@ video {
 .tw-text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.tw-text-8xl {
-  font-size: 6rem;
-  line-height: 1;
 }
 
 .tw-font-medium {
@@ -1228,25 +1207,30 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.tw-shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .tw-shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.tw-shadow-\[\#5fcdca\] {
-  --tw-shadow-color: #5fcdca;
-  --tw-shadow: var(--tw-shadow-colored);
+.tw-shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .tw-shadow-\[rgba\(170\,49\,233\,0\.44021358543417366\)\] {
   --tw-shadow-color: rgba(170,49,233,0.44021358543417366);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.tw-shadow-\[\#ffffff\] {
+  --tw-shadow-color: #ffffff;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.tw-shadow-\[\#0fff5f\] {
+  --tw-shadow-color: #0fff5f;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1306,12 +1290,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:tw-scale-\[1\.04\]:hover {
-  --tw-scale-x: 1.04;
-  --tw-scale-y: 1.04;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:tw-scale-x-\[1\.02\]:hover {
   --tw-scale-x: 1.02;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1347,10 +1325,6 @@ video {
     margin-top: 30px;
   }
 
-  .max-lg\:tw-w-\[300px\] {
-    width: 300px;
-  }
-
   .max-lg\:tw-w-\[320px\] {
     width: 320px;
   }
@@ -1384,10 +1358,6 @@ video {
        object-fit: contain;
   }
 
-  .max-lg\:tw-p-3 {
-    padding: 0.75rem;
-  }
-
   .max-lg\:tw-p-4 {
     padding: 1rem;
   }
@@ -1405,8 +1375,16 @@ video {
 }
 
 @media not all and (min-width: 768px) {
+  .max-md\:tw-invisible {
+    visibility: hidden;
+  }
+
   .max-md\:tw-mt-\[50px\] {
     margin-top: 50px;
+  }
+
+  .max-md\:tw-hidden {
+    display: none;
   }
 
   .max-md\:tw-w-\[320px\] {
@@ -1483,14 +1461,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:tw-m-32 {
-    margin: 8rem;
-  }
-
-  .md\:tw-m-24 {
-    margin: 6rem;
-  }
-
   .md\:tw-m-20 {
     margin: 5rem;
   }

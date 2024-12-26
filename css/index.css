@@ -127,7 +127,7 @@ header > .collapsible-header{
 .background-gradient {
     
     background-color: hsl(0, 0%, 0%);
-    background-image: radial-gradient(circle farthest-side at center top, hsla(151, 62%, 33%, 0.5) 0%, hsl(0, 0%, 0%) 80%, hsl(0, 0%, 0%) 100%);;
+    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.5) 0%, hsl(0, 0%, 0%) 80%, hsl(0, 0%, 0%) 100%);;
     background-attachment: fixed;
 }
 
@@ -148,12 +148,12 @@ header > .collapsible-header{
 .card-image-wrapper {
     border-radius: var(--border-radius);
     background-color: rgb(250,250,250);
-    box-shadow: 0px 0px 3rem 3rem rgb(15, 15, 15, 0.3) inset;
+    box-shadow: 0px 0px 3rem 3rem rgba(53, 53, 53, 0.3) inset;
 }
 
 @media screen and (max-width: 1024px) {
     .card-image-wrapper {
-        box-shadow: 0px 0px 1rem 1rem rgb(15, 15, 15, 0.3) inset;
+        box-shadow: 0px 0px 1rem 1rem rgba(53, 53, 53, 0.3) inset;
     }
     
 }
@@ -307,7 +307,7 @@ header > .collapsible-header{
     background: linear-gradient(#131219, #131219) padding-box, linear-gradient(
           var(--angle),
           #0fff5f,
-          white
+          rgb(25, 218, 252)
         ) border-box;
     animation: 1.5s rotate linear infinite;
   }
