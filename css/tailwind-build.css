@@ -716,6 +716,10 @@ video {
   height: 100%;
 }
 
+.tw-h-\[150px\] {
+  height: 150px;
+}
+
 .tw-max-h-\[650px\] {
   max-height: 650px;
 }
