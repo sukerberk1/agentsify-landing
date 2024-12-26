@@ -150,6 +150,7 @@ var controller = new ScrollMagic.Controller();
 new ScrollMagic.Scene({
     triggerElement: "#pre-card"
 })
+    .addIndicators() // add indicators (requires plugin)
     .setTween("#card1", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
     .addTo(controller);
 
@@ -157,14 +158,16 @@ new ScrollMagic.Scene({
     triggerElement: "#card1",
     offset: 400
 })
+    .addIndicators() // add indicators (requires plugin)
     .setTween("#card2", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
     .addTo(controller);
 
-    
+
 new ScrollMagic.Scene({
     triggerElement: "#card2",
     offset: 400
 })
+    .addIndicators() // add indicators (requires plugin)
     .setTween("#card3", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
     .addTo(controller);
 
@@ -177,9 +180,9 @@ var typedHero = new Typed('#hero-typed', {
     // showCursor: false,
     loop: true,
     backDelay: 2000
-  });
+});
 
-  /** typing animations */
+/** typing animations */
 var typedCardHeader = new Typed('#cards-header-typed', {
     stringsElement: '#cards-header-typed-strings',
     typeSpeed: 50,
@@ -187,4 +190,4 @@ var typedCardHeader = new Typed('#cards-header-typed', {
     // showCursor: false,
     loop: true,
     backDelay: 2000
-  });
+});

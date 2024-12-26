@@ -131,6 +131,14 @@ header > .collapsible-header{
     background-attachment: fixed;
 }
 
+.glass-card {
+    background: rgba(0,0,0,0.5);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: var(--border-radius);
+}
+
 .border-gradient{
     background: #e2e2e2;
     /* background: -webkit-linear-gradient(180deg, #6adf78 0%, #86d9d7 100%);
@@ -148,12 +156,12 @@ header > .collapsible-header{
 .card-image-wrapper {
     border-radius: var(--border-radius);
     background-color: rgb(250,250,250);
-    box-shadow: 0px 0px 3rem 3rem rgba(53, 53, 53, 0.3) inset;
+    box-shadow: 0px 0px 2rem 2rem rgba(53, 53, 53, 0.25) inset;
 }
 
 @media screen and (max-width: 1024px) {
     .card-image-wrapper {
-        box-shadow: 0px 0px 1rem 1rem rgba(53, 53, 53, 0.3) inset;
+        box-shadow: 0px 0px 1rem 1rem rgba(53, 53, 53, 0.25) inset;
     }
     
 }
