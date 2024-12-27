@@ -626,9 +626,8 @@ video {
   grid-row: span 2 / span 2;
 }
 
-.tw-my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+.tw-mb-12 {
+  margin-bottom: 3rem;
 }
 
 .tw-ml-auto {
@@ -645,6 +644,10 @@ video {
 
 .tw-mt-20 {
   margin-top: 5rem;
+}
+
+.tw-mt-24 {
+  margin-top: 6rem;
 }
 
 .tw-mt-3 {
@@ -673,18 +676,6 @@ video {
 
 .tw-mt-auto {
   margin-top: auto;
-}
-
-.tw-mb-12 {
-  margin-bottom: 3rem;
-}
-
-.tw-mt-24 {
-  margin-top: 6rem;
-}
-
-.tw-mt-16 {
-  margin-top: 4rem;
 }
 
 .tw-flex {
@@ -889,6 +880,10 @@ video {
   gap: 2.5rem;
 }
 
+.tw-gap-12 {
+  gap: 3rem;
+}
+
 .tw-gap-2 {
   gap: 0.5rem;
 }
@@ -915,10 +910,6 @@ video {
 
 .tw-gap-\[10\%\] {
   gap: 10%;
-}
-
-.tw-gap-12 {
-  gap: 3rem;
 }
 
 .tw-space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -977,14 +968,6 @@ video {
 
 .tw-border-\[1px\] {
   border-width: 1px;
-}
-
-.tw-border {
-  border-width: 1px;
-}
-
-.tw-border-b-4 {
-  border-bottom-width: 4px;
 }
 
 .\!tw-border-solid {
@@ -1236,12 +1219,6 @@ video {
   opacity: 0.9;
 }
 
-.tw-shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .tw-shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1252,11 +1229,6 @@ video {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.tw-shadow-\[\#0fff5f\] {
-  --tw-shadow-color: #0fff5f;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .tw-shadow-\[rgba\(170\,49\,233\,0\.44021358543417366\)\] {
@@ -1399,6 +1371,11 @@ video {
   .max-lg\:tw-text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .max-lg\:tw-text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .max-lg\:tw-shadow-md {

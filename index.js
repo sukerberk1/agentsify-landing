@@ -150,7 +150,7 @@ var controller = new ScrollMagic.Controller();
 new ScrollMagic.Scene({
     triggerElement: "#pre-card"
 })
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .setTween("#card1", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
     .addTo(controller);
 
@@ -158,7 +158,7 @@ new ScrollMagic.Scene({
     triggerElement: "#card1",
     offset: 400
 })
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .setTween("#card2", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
     .addTo(controller);
 
@@ -167,7 +167,7 @@ new ScrollMagic.Scene({
     triggerElement: "#card2",
     offset: 400
 })
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .setTween("#card3", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
     .addTo(controller);
 
@@ -195,7 +195,7 @@ new ScrollMagic.Scene({
           pin: true,
           pinSpacing: false,
           scrub: true,
-          markers: true
+        //   markers: true
         }
       });
     
