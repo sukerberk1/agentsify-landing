@@ -626,6 +626,16 @@ video {
   grid-row: span 2 / span 2;
 }
 
+.tw-my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.tw-my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .tw-mb-12 {
   margin-bottom: 3rem;
 }
@@ -1351,6 +1361,10 @@ video {
     place-items: end;
   }
 
+  .max-lg\:tw-items-center {
+    align-items: center;
+  }
+
   .max-lg\:tw-gap-10 {
     gap: 2.5rem;
   }
@@ -1366,11 +1380,6 @@ video {
 
   .max-lg\:tw-p-4 {
     padding: 1rem;
-  }
-
-  .max-lg\:tw-text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .max-lg\:tw-text-3xl {
@@ -1506,6 +1515,14 @@ video {
   .lg\:tw-columns-2 {
     -moz-columns: 2;
          columns: 2;
+  }
+
+  .lg\:tw-flex-col {
+    flex-direction: column;
+  }
+
+  .lg\:tw-flex-col-reverse {
+    flex-direction: column-reverse;
   }
 
   .lg\:tw-place-items-center {
