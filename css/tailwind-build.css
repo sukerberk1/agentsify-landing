@@ -578,10 +578,6 @@ video {
   top: -0.25rem;
 }
 
-.tw-left-\[20\%\] {
-  left: 20%;
-}
-
 .tw-right-3 {
   right: 0.75rem;
 }
@@ -592,10 +588,6 @@ video {
 
 .tw-top-3 {
   top: 0.75rem;
-}
-
-.tw-top-5 {
-  top: 1.25rem;
 }
 
 .tw-z-10 {
@@ -624,16 +616,6 @@ video {
 
 .tw-row-span-2 {
   grid-row: span 2 / span 2;
-}
-
-.tw-my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.tw-my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .tw-mb-12 {
@@ -704,10 +686,6 @@ video {
   height: 150px;
 }
 
-.tw-h-\[200px\] {
-  height: 200px;
-}
-
 .tw-h-\[30px\] {
   height: 30px;
 }
@@ -731,6 +709,14 @@ video {
 
 .tw-h-full {
   height: 100%;
+}
+
+.tw-h-\[100px\] {
+  height: 100px;
+}
+
+.tw-h-\[70px\] {
+  height: 70px;
 }
 
 .tw-max-h-\[650px\] {
@@ -763,10 +749,6 @@ video {
 
 .tw-w-\[150px\] {
   width: 150px;
-}
-
-.tw-w-\[200px\] {
-  width: 200px;
 }
 
 .tw-w-\[250px\] {
@@ -846,8 +828,20 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.tw-grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.tw-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .tw-grid-rows-3 {
   grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.tw-grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
 .tw-flex-col {
@@ -872,6 +866,10 @@ video {
 
 .tw-items-center {
   align-items: center;
+}
+
+.tw-justify-center {
+  justify-content: center;
 }
 
 .tw-justify-between {
@@ -920,6 +918,10 @@ video {
 
 .tw-gap-\[10\%\] {
   gap: 10%;
+}
+
+.tw-gap-y-10 {
+  row-gap: 2.5rem;
 }
 
 .tw-space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1042,10 +1044,6 @@ video {
   background-color: rgb(28 25 23 / var(--tw-bg-opacity, 1));
 }
 
-.tw-bg-transparent {
-  background-color: transparent;
-}
-
 .tw-bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -1066,6 +1064,10 @@ video {
 
 .tw-p-2 {
   padding: 0.5rem;
+}
+
+.tw-p-24 {
+  padding: 6rem;
 }
 
 .tw-p-4 {
@@ -1092,6 +1094,11 @@ video {
   padding: 5%;
 }
 
+.tw-px-40 {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
 .tw-px-\[10\%\] {
   padding-left: 10%;
   padding-right: 10%;
@@ -1105,6 +1112,26 @@ video {
 .tw-py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.tw-px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.tw-py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.tw-px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.tw-py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .tw-text-center {
@@ -1221,12 +1248,13 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.tw-underline {
-  text-decoration-line: underline;
+.tw-text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
-.tw-opacity-90 {
-  opacity: 0.9;
+.tw-underline {
+  text-decoration-line: underline;
 }
 
 .tw-shadow-lg {
@@ -1253,6 +1281,11 @@ video {
 
 .tw-ring-inset {
   --tw-ring-inset: inset;
+}
+
+.tw-brightness-150 {
+  --tw-brightness: brightness(1.5);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .tw-grayscale {
@@ -1373,11 +1406,6 @@ video {
     gap: 1.25rem;
   }
 
-  .max-lg\:tw-object-contain {
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-
   .max-lg\:tw-p-4 {
     padding: 1rem;
   }
@@ -1435,6 +1463,11 @@ video {
   .max-md\:tw-px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .max-md\:tw-py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .max-md\:tw-text-2xl {
@@ -1504,6 +1537,10 @@ video {
     margin-right: auto;
   }
 
+  .lg\:tw-grid {
+    display: grid;
+  }
+
   .lg\:tw-hidden {
     display: none;
   }
@@ -1521,16 +1558,26 @@ video {
     flex-direction: column;
   }
 
-  .lg\:tw-flex-col-reverse {
-    flex-direction: column-reverse;
-  }
-
   .lg\:tw-place-items-center {
     place-items: center;
   }
 
   .lg\:tw-justify-around {
     justify-content: space-around;
+  }
+
+  .lg\:tw-gap-40 {
+    gap: 10rem;
+  }
+
+  .lg\:tw-gap-x-40 {
+    -moz-column-gap: 10rem;
+         column-gap: 10rem;
+  }
+
+  .lg\:tw-px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .dark\:lg\:hover\:\[paint-order\:markers\]:hover:is(.tw-dark *) {

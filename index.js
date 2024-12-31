@@ -147,74 +147,56 @@ sections.forEach((sec) => {
 
 var controller = new ScrollMagic.Controller();
 
-new ScrollMagic.Scene({
-    triggerElement: "#pre-card"
-})
-    // .addIndicators() // add indicators (requires plugin)
-    .setTween("#card1", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
-    .addTo(controller);
+// new ScrollMagic.Scene({triggerElement: "#technologies", duration: 1300, offset: 900})
+//     .setPin("#technologies")
+//     .setTween("#technologies", 0.5, { scale: 10 })
+//     .addIndicators() // add indicators (requires plugin)
+//     .addTo(controller);
 
-new ScrollMagic.Scene({
-    triggerElement: "#card1",
-    offset: 400
-})
-    // .addIndicators() // add indicators (requires plugin)
-    .setTween("#card2", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
-    .addTo(controller);
+const items = gsap.utils.toArray(".card");
+const lastCard = items[items.length - 1];
 
+// Calculate the height of the last card
+let lastCardHeight = lastCard.clientHeight;
 
-new ScrollMagic.Scene({
-    triggerElement: "#card2",
-    offset: 400
-})
-    // .addIndicators() // add indicators (requires plugin)
-    .setTween("#card3", 0.5, { scale: 1 }) // trigger a TweenMax.to tween
-    .addTo(controller);
+// Calculate the total offset based on the "animation-item" attribute of each card
+const totaOffset = parseFloat(lastCard.getAttribute("animation-item")) || 0;
 
+// Add the total offset to the height of the last card
+lastCardHeight += totaOffset;
 
-    const items = gsap.utils.toArray(".card");
-    const lastCard = items[items.length - 1];
-    
-    // Calculate the height of the last card
-    let lastCardHeight = lastCard.clientHeight;
-    
-    // Calculate the total offset based on the "animation-item" attribute of each card
-    const totaOffset = parseFloat(lastCard.getAttribute("animation-item")) || 0;
-    
-    // Add the total offset to the height of the last card
-    lastCardHeight += totaOffset;
-    
-    items.forEach((item, index) => {
-      let tl = gsap.timeline({
+items.forEach((item, index) => {
+    let tl = gsap.timeline({
         scrollTrigger: {
-          trigger: item,
-          start: "top top+=" + item.getAttribute("animation-item"),
-          endTrigger: "#card-animation-end",
-          // Dynamically set the end position based on the total height of all cards
-          end: `bottom top+=${lastCardHeight}px`,
-          pin: true,
-          pinSpacing: false,
-          scrub: true,
-        //   markers: true
+            trigger: item,
+            start: "top top+=" + item.getAttribute("animation-item"),
+            endTrigger: "#card-animation-end",
+            // Dynamically set the end position based on the total height of all cards
+            end: `bottom top+=${lastCardHeight}px`,
+            pin: true,
+            pinSpacing: false,
+            scrub: true,
+            //   markers: true
         }
-      });
-    
-      if (item === lastCard) {
+    });
+
+    if (item === lastCard) {
         // If it's the last card, only scale it
         tl.to(item, {
-          scale: 0.9 + 0.02 * index,
-          transformOrigin: "center center"
+            scale: 0.9 + 0.02 * index,
+            transformOrigin: "center center"
         });
-      } else {
+    } else {
         // For other cards, animate both opacity and scale
         tl.to(item, {
-          opacity: 0.4,
-          scale: 0.9 + 0.02 * index,
-          transformOrigin: "center center"
+            opacity: 0.4,
+            scale: 0.9 + 0.02 * index,
+            transformOrigin: "center center"
         });
-      }
-    });
-    
+    }
+});
+
+
 
 /** typing animations */
 var typedHero = new Typed('#hero-typed', {
@@ -229,6 +211,16 @@ var typedHero = new Typed('#hero-typed', {
 /** typing animations */
 var typedCardHeader = new Typed('#cards-header-typed', {
     stringsElement: '#cards-header-typed-strings',
+    typeSpeed: 50,
+    backSpeed: 50,
+    // showCursor: false,
+    loop: true,
+    backDelay: 2000
+});
+
+/** typing animations */
+var typedCardHeader = new Typed('#technologies-header-typed', {
+    stringsElement: '#technologies-header-typed-strings',
     typeSpeed: 50,
     backSpeed: 50,
     // showCursor: false,

@@ -109,26 +109,10 @@ header > .collapsible-header{
     filter: blur(3px);
 }
 
-/* hero img refers to the app screen that is gonna be removed */
-.hero-img-bg-grad{
-    background: rgb(126,34,206);
-    background: linear-gradient(90deg, #7e22ce91 8%, #625aafae 31%, #7badbbbc 76%, #54d2d0ca 89%);
-    filter: blur(50px);
-    opacity: 0.5;
-}
-
-#dashboard {
-    /* transform-origin: bottom center; */
-    transform: perspective(1200px) translateX(0px) translateY(12px) scale(0.8)
-        rotate(0deg) rotateX(70deg);
-    transition: transform 0.5;
-}
-
 /* cards */
 .background-gradient {
-    
     background-color: hsl(0, 0%, 0%);
-    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.5) 0%, hsl(0, 0%, 0%) 80%, hsl(0, 0%, 0%) 100%);;
+    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.5) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%);;
     background-attachment: fixed;
 }
 
@@ -251,6 +235,44 @@ header > .collapsible-header{
     color: #fff;
 }
 
+.technologies-section {
+    /* background-color: hsl(0, 0%, 0%);
+    background-image: radial-gradient(circle farthest-side at center bottom, hsla(197, 61%, 75%, 0.5) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%); */
+    background-image: radial-gradient(#000000 2px, transparent 2px), radial-gradient(#000000 2px, transparent 2px);
+background-size: 60px 60px;
+background-position: 0 0, 30px 30px;
+background-color: #ffffff;
+    background-attachment: fixed;
+}
+
+#technologies {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+#technologies > div {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    #technologies {
+        grid-row-gap: 40px;
+        flex-flow: wrap;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        justify-content: center;
+        place-items: center;
+        display: grid;
+    }
+}
 
 /* Style for the collapsible content such as faq commonly known as: accordion */
 
