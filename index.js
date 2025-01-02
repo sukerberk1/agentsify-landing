@@ -64,35 +64,6 @@ gsap.to(".reveal-up", {
     y: "100%",
 })
 
-gsap.to("#dashboard", {
-    boxShadow: "0px 15px 25px -5px #7e22ceaa",
-    duration: 0.3,
-    scrollTrigger: {
-        trigger: "#hero-section",
-        start: "60% 60%",
-        end: "80% 80%",
-        // markers: true
-    }
-
-})
-
-// straightens the slanting image
-gsap.to("#dashboard", {
-
-    scale: 1,
-    translateY: 0,
-    // translateY: "0%",
-    rotateX: "0deg",
-    scrollTrigger: {
-        trigger: "#hero-section",
-        start: window.innerWidth > RESPONSIVE_WIDTH ? "top 95%" : "top 70%",
-        end: "bottom bottom",
-        scrub: 1,
-        // markers: true,
-    }
-
-})
-
 const faqAccordion = document.querySelectorAll('.faq-accordion')
 
 faqAccordion.forEach(function (btn) {
@@ -145,14 +116,6 @@ sections.forEach((sec) => {
 
 // ------------- cards animations ---------------
 
-var controller = new ScrollMagic.Controller();
-
-// new ScrollMagic.Scene({triggerElement: "#technologies", duration: 1300, offset: 900})
-//     .setPin("#technologies")
-//     .setTween("#technologies", 0.5, { scale: 10 })
-//     .addIndicators() // add indicators (requires plugin)
-//     .addTo(controller);
-
 const items = gsap.utils.toArray(".card");
 const lastCard = items[items.length - 1];
 
@@ -195,6 +158,30 @@ items.forEach((item, index) => {
         });
     }
 });
+
+/** section wipes  */
+
+var controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+        triggerHook: 'onLeave',
+        duration: "200%" // this works just fine with duration 0 as well
+        // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+        // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+    }
+});
+
+// get all slides
+var slides = document.querySelectorAll("section.panel");
+
+// create scene for every slide
+for (var i=0; i<slides.length; i++) {
+    new ScrollMagic.Scene({
+            triggerElement: slides[i]
+        })
+        .setPin(slides[i], {pushFollowers: false})
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+}
 
 
 
