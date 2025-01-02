@@ -159,9 +159,25 @@ items.forEach((item, index) => {
     }
 });
 
+/* Technology logos fade-in */
+
+var controller = new ScrollMagic.Controller();
+
+var revealElements = document.getElementsByClassName("tech-logo");
+for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+    new ScrollMagic.Scene({
+                        triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                        offset: 50,												 // start a little later
+                        triggerHook: 0.9,
+                    })
+                    .setClassToggle(revealElements[i], "visible") // add class toggle
+                    .addIndicators({name: "logo " + (i+1) }) // add indicators (requires plugin)
+                    .addTo(controller);
+}
+
 /** section wipes  */
 
-var controller = new ScrollMagic.Controller({
+var controller2 = new ScrollMagic.Controller({
     globalSceneOptions: {
         triggerHook: 'onLeave',
         duration: "350%" // this works just fine with duration 0 as well
@@ -180,9 +196,8 @@ for (var i=0; i<slides.length; i++) {
         })
         .setPin(slides[i], {pushFollowers: false})
         .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
+        .addTo(controller2);
 }
-
 
 
 /** typing animations */
