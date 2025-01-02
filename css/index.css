@@ -112,7 +112,7 @@ header > .collapsible-header{
 /* cards */
 .background-gradient {
     background-color: hsl(0, 0%, 0%);
-    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.5) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%);;
+    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.65) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%);;
     background-attachment: fixed;
 }
 
@@ -235,6 +235,7 @@ header > .collapsible-header{
     color: #fff;
 }
 
+/* technologies section with white-dotted background to consider in the future */
 .technologies-section {
     /* background-color: hsl(0, 0%, 0%);
     background-image: radial-gradient(circle farthest-side at center bottom, hsla(197, 61%, 75%, 0.5) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%); */
@@ -259,6 +260,17 @@ background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#technologies > div > img {
+    -webkit-filter: drop-shadow(0px 2px 0 white)
+    drop-shadow(0px -1px 0 white)
+    drop-shadow(1px 0px 0 white)
+    drop-shadow(-1px 0px 0 white);
+    filter: drop-shadow(0px 2px 0 white)
+    drop-shadow(0px -1px 0 white)
+    drop-shadow(2px 0px 0 white)
+    drop-shadow(-1px 0px 0 white);
 }
 
 @media screen and (min-width: 1024px) {
