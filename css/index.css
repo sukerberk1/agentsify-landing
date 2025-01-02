@@ -297,21 +297,21 @@ background-color: #ffffff;
 
 .panel.first {
     background: #474aff;
-    background: -webkit-linear-gradient(0deg, #474aff 0%, rgba(0,0,0,0.5) 100%);
-    background: linear-gradient(0deg, #474aff 0%, rgba(0,0,0,0.5) 100%);
+    background: -webkit-linear-gradient(0deg, #474aff 0%, transparent 100%);
+    background: linear-gradient(0deg, #474aff 0%, transparent 100%);
 }
 
 .panel.second {
-    background: #474aff;
-    background: -webkit-linear-gradient(0deg, #bc48ff 0%, rgba(0,0,0,0.5) 100%);
-    background: linear-gradient(0deg, #bc48ff 0%, rgba(0,0,0,0.5) 100%);
+    background: #bc48ff;
+    background: -webkit-linear-gradient(0deg, #bc48ff 0%, transparent 100%);
+    background: linear-gradient(0deg, #bc48ff 0%, transparent 100%);
 }
 
 .panel.third {
-    background: #474aff;
-    background: -webkit-linear-gradient(0deg, #30d49d 0%, rgba(0,0,0,0.5) 100%);
-    background: linear-gradient(0deg, #30d49d 0%, rgba(0,0,0,0.5) 100%);
-    margin-bottom: 400px;
+    background: #30d49d;
+    background: -webkit-linear-gradient(0deg, #30d49d 0%, transparent 100%);
+    background: linear-gradient(0deg, #30d49d 0%, transparent 100%);
+    margin-bottom: 500px;
 }
 
 /* Style for the collapsible content such as faq commonly known as: accordion */
