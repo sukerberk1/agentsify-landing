@@ -203,7 +203,7 @@ for (var i=0; i<slides.length; i++) {
         continue;
     new ScrollMagic.Scene({
         triggerElement: slides[i],
-        offset: 720
+        offset: 700
     })
     .setClassToggle(slides[i], "no-text")
     // .addIndicators({name: `Slide ${i} text disappears`})
