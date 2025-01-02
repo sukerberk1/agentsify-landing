@@ -336,6 +336,10 @@ background-color: #ffffff;
     margin-bottom: 500px;
 }
 
+.panel.no-text > h2 {
+    visibility: hidden;
+}
+
 /* Style for the collapsible content such as faq commonly known as: accordion */
 
 .faq-accordion {

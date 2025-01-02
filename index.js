@@ -171,7 +171,7 @@ for (var i=0; i<revealElements.length; i++) { // create a scene for each element
                         triggerHook: 0.9,
                     })
                     .setClassToggle(revealElements[i], "visible") // add class toggle
-                    .addIndicators({name: "logo " + (i+1) }) // add indicators (requires plugin)
+                    // .addIndicators({name: "logo " + (i+1) }) // add indicators (requires plugin)
                     .addTo(controller);
 }
 
@@ -195,8 +195,19 @@ for (var i=0; i<slides.length; i++) {
             triggerElement: slides[i]
         })
         .setPin(slides[i], {pushFollowers: false})
-        .addIndicators() // add indicators (requires plugin)
+        // .addIndicators() // add indicators (requires plugin)
         .addTo(controller2);
+
+    // Add text disappearing functionality for 1st and 2nd slide
+    if (i === 2)
+        continue;
+    new ScrollMagic.Scene({
+        triggerElement: slides[i],
+        offset: 720
+    })
+    .setClassToggle(slides[i], "no-text")
+    // .addIndicators({name: `Slide ${i} text disappears`})
+    .addTo(controller2)
 }
 
 
