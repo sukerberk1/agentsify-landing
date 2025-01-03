@@ -325,14 +325,14 @@ background-color: #ffffff;
 
 .panel.second {
     background: #bc48ff;
-    background: -webkit-linear-gradient(0deg, rgb(188, 72, 255, 0.7) 0%, transparent 100%);
-    background: linear-gradient(0deg, rgb(188, 72, 255, 0.7) 0%, transparent 100%);
+    background: -webkit-linear-gradient(0deg, rgba(255, 72, 249, 0.65) 0%, transparent 100%);
+    background: linear-gradient(0deg, rgba(255, 72, 249, 0.65) 0%, transparent 100%);
 }
 
 .panel.third {
     background: #30d49d;
-    background: -webkit-linear-gradient(0deg, #30d49d 0%, transparent 100%);
-    background: linear-gradient(0deg, #30d49d 0%, transparent 100%);
+    background: -webkit-linear-gradient(0deg, rgba(48, 212, 122, 0.75) 0%, transparent 100%);
+    background: linear-gradient(0deg, rgba(48, 212, 122, 0.8) 0%, transparent 100%);
     margin-bottom: 500px;
 }
 
