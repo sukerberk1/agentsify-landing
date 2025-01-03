@@ -670,6 +670,10 @@ video {
   margin-top: 2rem;
 }
 
+.tw-mt-\[140px\] {
+  margin-top: 140px;
+}
+
 .tw-mt-auto {
   margin-top: auto;
 }
