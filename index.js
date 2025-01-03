@@ -194,54 +194,10 @@ for (var i=0; i<slides.length; i++) {
     new ScrollMagic.Scene({
             triggerElement: slides[i]
         })
-        .setPin(slides[i], {pushFollowers: false})
+        .setPin(slides[i], {pushFollowers: false, spacerClass: i === 0 ? "gradient-panel-1st-pin-spacer" : "gradient-panel-pin-spacer"})
+        .setClassToggle(`#slide-header-${i+1}`, "visible")
         // .addIndicators() // add indicators (requires plugin)
         .addTo(controller2);
-
-    // Add text modification functionality for 1st and 2nd slide
-    if (i === 2)
-        continue;
-    function getEnterTextChangeFunction() {
-        if (i === 0) {
-            return (e) => {
-                // console.log("0E");
-                document.querySelectorAll(".panel.second > h2")[0]
-                .innerHTML = `Agentsify your <span class="tw-invisible"> business </span>`;
-            }
-        }
-        else if (i === 1) {
-            return (e) => {
-                // console.log("1E");
-                document.querySelectorAll(".panel.third > h2")[0]
-                .innerHTML = "Agentsify your business";
-            }
-        }
-    }
-    function getLeaveTextChangeFunction() {
-        if (i === 0) {
-            return (e) => {
-                // console.log("0L");
-                document.querySelectorAll(".panel.second > h2")[0]
-                .innerHTML = `<span class="tw-invisible"> Agentsify </span> your <span class="tw-invisible"> business </span>`;
-            }
-        }
-        else if (i === 1) {
-            return (e) => {
-                // console.log("1L");
-                document.querySelectorAll(".panel.third > h2")[0]
-                .innerHTML = `<span class="tw-invisible">Agentsify your </span> business`;
-            }
-        }
-    }
-    new ScrollMagic.Scene({
-        triggerElement: slides[i],
-        offset: 720
-    })
-    // .setClassToggle(slides[i], "no-text")
-    .addIndicators({name: `Slide ${i} text disappears`})
-    .on("enter", getEnterTextChangeFunction())
-    .on("leave", getLeaveTextChangeFunction())
-    .addTo(controller2)
 }
 
 
