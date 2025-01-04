@@ -445,13 +445,14 @@ header>.collapsible-header {
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
-    background-image: linear-gradient(var(--rotate), #5dff78, #bc48ff 43%, #4e00c2);
+    background: conic-gradient(from var(--rotate) at 50% 50%, #5dff78ff 0%, #4e00c2ff 25%, #bc48ffff 50%, #4e00c2ff 75%, #5dff78ff 100%);background-blend-mode: color-dodge;
+    /* background-image: linear-gradient(var(--rotate), #5dff78, #bc48ff 43%, #4e00c2); */
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
-    animation: spin 1s linear infinite;
-    transform: scale(1.05);
+    animation: spin 2s linear infinite;
+    transform: scaleX(1.05) scaleY(1.075);
 }
 
 .animated-border::after {
