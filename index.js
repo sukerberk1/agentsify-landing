@@ -194,7 +194,10 @@ for (var i=0; i<slides.length; i++) {
     new ScrollMagic.Scene({
             triggerElement: slides[i]
         })
-        .setPin(slides[i], {pushFollowers: false, spacerClass: i === 0 ? "gradient-panel-1st-pin-spacer" : "gradient-panel-pin-spacer"})
+        .setPin(slides[i], {
+            pushFollowers: false, 
+            spacerClass: `gradient-panel-pin-spacer-${i+1}`
+        })
         .setClassToggle(`#slide-header-${i+1}`, "visible")
         // .addIndicators() // add indicators (requires plugin)
         .addTo(controller2);

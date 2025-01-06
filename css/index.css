@@ -355,12 +355,16 @@ header>.collapsible-header {
     opacity: 1;
 }
 
-.gradient-panel-pin-spacer {
-    z-index: 10;
+.gradient-panel-pin-spacer-1 {
+    z-index: 50;
 }
 
-.gradient-panel-pin-spacer {
+.gradient-panel-pin-spacer-2 {
     z-index: 0;
+}
+
+.gradient-panel-pin-spacer-3 {
+    z-index: 10;
 }
 
 /* Style for the collapsible content such as faq commonly known as: accordion */
