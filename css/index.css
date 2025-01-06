@@ -325,20 +325,20 @@ header>.collapsible-header {
 
 .panel.first {
     background: #474aff;
-    background: -webkit-linear-gradient(0deg, rgba(71, 74, 255, 0.5) 0%, transparent 100%);
-    background: linear-gradient(0deg, rgba(71, 74, 255, 0.5) 0%, transparent 100%);
+    background: -webkit-linear-gradient(0deg, rgba(71, 74, 255, 0.5) 0%, transparent 50%);
+    background: linear-gradient(0deg, rgba(71, 74, 255, 0.5) 0%, transparent 50%);
 }
 
 .panel.second {
     background: #bc48ff;
-    background: -webkit-linear-gradient(0deg, rgba(255, 72, 249, 0.65) 0%, transparent 100%);
-    background: linear-gradient(0deg, rgba(255, 72, 249, 0.65) 0%, transparent 100%);
+    background: -webkit-linear-gradient(0deg, rgba(255, 72, 249, 0.6) 0%, transparent 75%);
+    background: linear-gradient(0deg, rgba(255, 72, 249, 0.6) 0%, transparent 75%);
 }
 
 .panel.third {
     background: #30d49d;
-    background: -webkit-linear-gradient(0deg, rgba(48, 212, 122, 0.75) 0%, transparent 100%);
-    background: linear-gradient(0deg, rgba(48, 212, 122, 0.8) 0%, transparent 100%);
+    background: -webkit-linear-gradient(0deg, rgba(48, 212, 122, 0.7) 0%, transparent 100%);
+    background: linear-gradient(0deg, rgba(48, 212, 122, 0.7) 0%, transparent 100%);
     margin-bottom: 500px;
 }
 
