@@ -120,8 +120,7 @@ header>.collapsible-header {
 /* cards */
 .background-gradient {
     background-color: hsl(0, 0%, 0%);
-    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.65) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%);
-    ;
+    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.6) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%);
     background-attachment: fixed;
 }
 
@@ -247,15 +246,54 @@ header>.collapsible-header {
     color: #fff;
 }
 
-/* technologies section with white-dotted background to consider in the future */
-.technologies-section {
-    /* background-color: hsl(0, 0%, 0%);
-    background-image: radial-gradient(circle farthest-side at center bottom, hsla(197, 61%, 75%, 0.5) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%); */
-    background-image: radial-gradient(#000000 2px, transparent 2px), radial-gradient(#000000 2px, transparent 2px);
-    background-size: 60px 60px;
-    background-position: 0 0, 30px 30px;
-    background-color: #ffffff;
+/* services section */
+
+.service-chat-message-bot {
+    padding: 0.6rem;
+    border-radius: var(--border-radius);
+    border-bottom-left-radius: 0;
+    border: 1px solid darkslategray;
+    background: linear-gradient(12deg, gray 0%, darkslategray 100%);
+}
+
+.service-chat-message-user {
+    padding: 0.6rem;
+    border-radius: var(--border-radius);
+    border-bottom-right-radius: 0;
+    border: 1px solid lightskyblue;
+    background: linear-gradient(167deg,  rgb(0, 110, 255) 0%, rgb(0, 56, 139) 100%);
+}
+
+.service-gradient-background {
+    /* background: 0% 0% / 100px 100px repeat repeating-linear-gradient(to bottom left, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%), 0% 0% / 100px 100px repeat repeating-linear-gradient(to bottom right, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%), radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%);
+    background-blend-mode: multiply; */
+    background: repeating-linear-gradient(45deg, #000000ff 0% 8%, #470affff 12%, #0a81ffff 12% 12.2%), linear-gradient(45deg, #ff0000ff 0%, #ea00ffff 50%, #0000ffff 100%);
+    background-blend-mode: luminosity;
     background-attachment: fixed;
+    position: relative;
+    padding: 2rem;
+    animation: service-gradient-card-animation 16s linear infinite;
+}
+
+.service-gradient-background::before {
+    content: '';
+    z-index: -1;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, black 0%, black 50%, transparent 100%);
+    border-radius: inherit;
+}
+
+@keyframes service-gradient-card-animation {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: -33% 50%;
+    }
 }
 
 #technologies {
@@ -325,14 +363,14 @@ header>.collapsible-header {
 
 .panel.first {
     background: #474aff;
-    background: -webkit-linear-gradient(0deg, rgba(71, 74, 255, 0.5) 0%, transparent 50%);
-    background: linear-gradient(0deg, rgba(71, 74, 255, 0.5) 0%, transparent 50%);
+    background: -webkit-linear-gradient(0deg, rgba(71, 74, 255, 0.75) 0%, transparent 50%);
+    background: linear-gradient(0deg, rgba(71, 74, 255, 0.75) 0%, transparent 50%);
 }
 
 .panel.second {
     background: #bc48ff;
-    background: -webkit-linear-gradient(0deg, rgba(255, 72, 249, 0.6) 0%, transparent 75%);
-    background: linear-gradient(0deg, rgba(255, 72, 249, 0.6) 0%, transparent 75%);
+    background: -webkit-linear-gradient(0deg, rgba(255, 72, 249, 0.7) 0%, transparent 75%);
+    background: linear-gradient(0deg, rgba(255, 72, 249, 0.7) 0%, transparent 75%);
 }
 
 .panel.third {

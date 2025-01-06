@@ -345,14 +345,8 @@
             </div>
             <div
                 class="tw-mt-6 tw-grid tw-grid-cols-8 tw-grid-rows-3 tw-max-w-[80%] tw-gap-4 max-lg:tw-flex max-lg:tw-flex-col max-lg:tw-items-center">
-                <div class="reveal-up tw-col-span-2 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] max-lg:tw-flex-col max-lg:tw-items-center"
+                <div class="reveal-up tw-col-span-5 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] tw-flex-col max-lg:tw-items-center"
                     style="background: linear-gradient(340deg, rgba(0,0,0,0.8547794117647058) 50%, rgb(46, 46, 46) 100%, rgba(254,249,231,1) 100%);">
-                    <div class="tw-text-4xl max-md:tw-text-2xl tw-h-[150px]">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/phone-chat.webm" type='video/webm' />
-                        </video>
-                    </div>
-
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-2xl max-md:tw-text-xl">
                             Building AI agents
@@ -363,15 +357,22 @@
                             distinctio
                         </p>
                     </div>
-                </div>
-                <div class="reveal-up tw-col-span-5 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
-                    style="background: linear-gradient(15deg, rgba(0,0,0,0.8547794117647058) 50%, rgba(27,124,102,1) 100%, rgba(254,249,231,1) 100%);">
-                    <div class="tw-text-4xl max-md:tw-text-2xl tw-h-[150px]">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/sheets.webm" type='video/webm' />
-                        </video>
+                    <div class="tw-text-sm tw-grow md:tw-text-md tw-min-h-[150px] tw-flex tw-flex-col tw-justify-center tw-gap-8">
+                        <div class="tw-flex tw-items-start">
+                            <span class="service-chat-message-bot" id="service-chat-message-bot-typed"></span>
+                        </div>
+                        <div id="service-chat-message-bot-typed-strings">
+                            <p>Hello, your task "Send emails to customers" is about to finish soon.</p>
+                            <p>Hello, your coffee is ready, waiting for you in the kitchen.</p>
+                            <p>Hello, I've been petting your dog and it's happy now.</p>
+                        </div>
+                        <div class="tw-flex tw-flex-row-reverse">
+                            <span class="service-chat-message-user">Great, now work on KPI analysis.</span>
+                        </div>
                     </div>
-
+                </div>
+                <div class="reveal-up tw-col-span-3 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
+                    style="background: linear-gradient(15deg, rgba(0,0,0,0.8547794117647058) 50%, rgba(27,124,102,1) 100%, rgba(254,249,231,1) 100%);">
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-2xl max-md:tw-text-xl">
                             Consulting AI solutions
@@ -382,15 +383,14 @@
                             distinctio
                         </p>
                     </div>
+                    <div class="tw-text-4xl max-md:tw-text-2xl tw-h-[150px] lg:tw-flex lg:tw-justify-center">
+                        <video loop muted autoplay>
+                            <source src="./assets/icons/animations/sheets.webm" type='video/webm' />
+                        </video>
+                    </div>
                 </div>
                 <div class="reveal-up tw-col-span-3 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
                     style="background: linear-gradient(220deg, rgba(0,0,0,0.8547794117647058) 50%, rgb(17, 17, 17) 100%, rgba(254,249,231,1) 100%);">
-                    <div class="tw-text-4xl max-md:tw-text-2xl tw-h-[150px]">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/ai-processor.webm" type='video/webm' />
-                        </video>
-                    </div>
-
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-2xl max-md:tw-text-xl">
                             AI solutions deployment & monitoring
@@ -401,15 +401,13 @@
                             distinctio
                         </p>
                     </div>
-                </div>
-                <div class="reveal-up tw-col-span-3 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
-                    style="background: linear-gradient(155deg, rgba(0,0,0,0.8547794117647058) 50%, rgb(27, 96, 124) 100%, rgba(254,249,231,1) 100%);">
-                    <div class="tw-text-4xl max-md:tw-text-2xl">
+                    <div class="tw-text-4xl max-md:tw-text-2xl tw-h-[150px] lg:tw-flex lg:tw-justify-center">
                         <video loop muted autoplay>
-                            <source src="./assets/icons/animations/ai-bulb.webm" type='video/webm' />
+                            <source src="./assets/icons/animations/ai-processor.webm" type='video/webm' />
                         </video>
                     </div>
-
+                </div>
+                <div class="reveal-up tw-col-span-5 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center service-gradient-background">
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-2xl max-md:tw-text-xl">
                             Creating machine learning models
@@ -420,34 +418,12 @@
                             distinctio
                         </p>
                     </div>
-                </div>
-                <div class="reveal-up tw-col-span-5 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
-                    style="background: linear-gradient(155deg, rgba(0,0,0,0.8547794117647058) 50%, rgb(27, 96, 124) 100%, rgba(254,249,231,1) 100%);">
                     <div class="tw-text-4xl max-md:tw-text-2xl">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/ai-bulb.webm" type='video/webm' />
-                        </video>
-                    </div>
-
-                    <div class="tw-flex tw-flex-col tw-gap-4">
-                        <h3 class="tw-text-2xl max-md:tw-text-xl">
-                            Creating machine learning models
-                        </h3>
-                        <p class="tw-text-gray-300 max-md:tw-text-sm">
-                            Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Animi quasi consequuntur,
-                            distinctio
-                        </p>
+                        machine learning model here
                     </div>
                 </div>
                 <div class="reveal-up tw-col-span-5 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
                     style="background: linear-gradient(155deg, rgba(0,0,0,0.8547794117647058) 50%, rgb(27, 96, 124) 100%, rgba(254,249,231,1) 100%);">
-                    <div class="tw-text-4xl max-md:tw-text-2xl">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/ai-bulb.webm" type='video/webm' />
-                        </video>
-                    </div>
-
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-2xl max-md:tw-text-xl">
                             Creating machine learning models
@@ -457,6 +433,29 @@
                             adipisicing elit. Animi quasi consequuntur,
                             distinctio
                         </p>
+                    </div>
+                    <div class="tw-text-4xl max-md:tw-text-2xl">
+                        <video loop muted autoplay>
+                            <source src="./assets/icons/animations/ai-bulb.webm" type='video/webm' />
+                        </video>
+                    </div>
+                </div>
+                <div class="reveal-up tw-col-span-3 tw-min-h-32 tw-row-span-1 tw-flex lg:tw-min-h-64 tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
+                    style="background: linear-gradient(155deg, rgba(0,0,0,0.8547794117647058) 50%, rgb(27, 96, 124) 100%, rgba(254,249,231,1) 100%);">
+                    <div class="tw-flex tw-flex-col tw-gap-4">
+                        <h3 class="tw-text-2xl max-md:tw-text-xl">
+                            Creating machine learning models
+                        </h3>
+                        <p class="tw-text-gray-300 max-md:tw-text-sm">
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Animi quasi consequuntur,
+                            distinctio
+                        </p>
+                    </div>
+                    <div class="tw-text-4xl max-md:tw-text-2xl lg:tw-flex lg:tw-justify-center">
+                        <video loop muted autoplay>
+                            <source src="./assets/icons/animations/ai-bulb.webm" type='video/webm' />
+                        </video>
                     </div>
                 </div>
             </div>

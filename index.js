@@ -233,3 +233,12 @@ var typedCardHeader = new Typed('#technologies-header-typed', {
     loop: true,
     backDelay: 2000
 });
+
+var typedCardHeader = new Typed('#service-chat-message-bot-typed', {
+    stringsElement: '#service-chat-message-bot-typed-strings',
+    typeSpeed: 50,
+    backSpeed: 50,
+    showCursor: false,
+    loop: true,
+    backDelay: 2000
+});s
