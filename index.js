@@ -241,4 +241,13 @@ var typedCardHeader = new Typed('#service-chat-message-bot-typed', {
     showCursor: false,
     loop: true,
     backDelay: 2000
-});s
+});
+
+var typedCardHeader = new Typed('#service-card-data-typed', {
+    stringsElement: '#service-card-data-typed-strings',
+    typeSpeed: 50,
+    backSpeed: 50,
+    showCursor: false,
+    loop: true,
+    backDelay: 5000
+});

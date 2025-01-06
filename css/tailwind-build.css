@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.tw-invisible {
+  visibility: hidden;
+}
+
 .tw-absolute {
   position: absolute;
 }
@@ -612,6 +616,10 @@ video {
 
 .tw-row-span-1 {
   grid-row: span 1 / span 1;
+}
+
+.tw-m-auto {
+  margin: auto;
 }
 
 .tw-mb-12 {
@@ -908,6 +916,10 @@ video {
 
 .tw-divide-x-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-x-reverse: 1;
+}
+
+.tw-self-center {
+  align-self: center;
 }
 
 .tw-overflow-hidden {
