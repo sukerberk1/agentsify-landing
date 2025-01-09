@@ -618,8 +618,14 @@ video {
   grid-row: span 1 / span 1;
 }
 
-.tw-m-auto {
-  margin: auto;
+.tw-mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.tw-mx-40 {
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
 .tw-mb-12 {
@@ -918,8 +924,8 @@ video {
   --tw-divide-x-reverse: 1;
 }
 
-.tw-self-center {
-  align-self: center;
+.tw-self-stretch {
+  align-self: stretch;
 }
 
 .tw-overflow-hidden {
@@ -948,6 +954,15 @@ video {
 
 .tw-border-\[1px\] {
   border-width: 1px;
+}
+
+.tw-border {
+  border-width: 1px;
+}
+
+.tw-border-y-0 {
+  border-top-width: 0px;
+  border-bottom-width: 0px;
 }
 
 .\!tw-border-solid {
@@ -1043,6 +1058,10 @@ video {
 
 .tw-p-\[5\%\] {
   padding: 5%;
+}
+
+.tw-p-4 {
+  padding: 1rem;
 }
 
 .tw-px-14 {
@@ -1428,6 +1447,11 @@ video {
     margin: 5rem;
   }
 
+  .md\:tw-mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
   .md\:tw-min-h-\[65vh\] {
     min-height: 65vh;
   }
@@ -1440,6 +1464,15 @@ video {
     flex-direction: row;
   }
 
+  .md\:tw-border {
+    border-width: 1px;
+  }
+
+  .md\:tw-border-y-0 {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+  }
+
   .md\:tw-text-left {
     text-align: left;
   }
@@ -1449,6 +1482,11 @@ video {
   .lg\:tw-mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .lg\:tw-mx-40 {
+    margin-left: 10rem;
+    margin-right: 10rem;
   }
 
   .lg\:tw-flex {
@@ -1491,6 +1529,13 @@ video {
 
   .dark\:lg\:hover\:\[paint-order\:markers\]:hover:is(.tw-dark *) {
     paint-order: markers;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:tw-mx-40 {
+    margin-left: 10rem;
+    margin-right: 10rem;
   }
 }
 
