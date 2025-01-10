@@ -406,6 +406,52 @@ code.service-card-code {
     z-index: 10;
 }
 
+/** booking section */
+.booking-section {
+    /* background: -webkit-linear-gradient(90deg, #6adf78 0%, #86d9d7 100%);
+    background: linear-gradient(90deg, #6adf78 0%, #86d9d7 100%); */
+    background-image: radial-gradient(circle farthest-side at center top, hsla(175, 100%, 61%, 0.6) 0%, hsl(0, 0%, 0%) 90%, hsla(0, 0%, 0%, 1) 100%);
+    position: relative;
+}
+
+.booking-section::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/** faq section */
+.faq-section {
+    --x-faq-highlight: 50%;
+    --y-faq-highlight: -100%;
+
+    position: relative;   
+    background-image: linear-gradient(#919191 1px, transparent 1px), linear-gradient(to right, #919191 1px, transparent 1px);
+    background-size: 98px 98px;
+    background-color: #000000;
+    background-position: center;
+}
+
+.faq-section::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+        circle at var(--x-faq-highlight) var(--y-faq-highlight),
+        rgba(78, 255, 71, 0.7) 0%,
+        rgba(0, 0, 0, 0.9) 10%, #000000 100%
+    );
+}
+
 /* Style for the collapsible content such as faq commonly known as: accordion */
 
 .faq-accordion {

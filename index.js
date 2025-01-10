@@ -251,3 +251,21 @@ var typedCardHeader = new Typed('#service-card-data-typed', {
     loop: true,
     backDelay: 5000
 });
+
+/** faq animated radial gradient background */
+const faqSectionBackground = document.querySelector('.faq-section');
+
+faqSectionBackground.addEventListener('mousemove', e => {
+  const rect = faqSectionBackground.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  faqSectionBackground.style.setProperty('--x-faq-highlight', x + 'px');
+  faqSectionBackground.style.setProperty('--y-faq-highlight', y + 'px');
+});
+
+// Detect when the mouse leaves the faq-section
+faqSectionBackground.addEventListener('mouseleave', () => {
+    faqSectionBackground.style.setProperty('--x-faq-highlight', `50%`);
+    faqSectionBackground.style.setProperty('--y-faq-highlight', `-100%`);
+  });
