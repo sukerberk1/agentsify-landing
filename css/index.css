@@ -447,9 +447,60 @@ code.service-card-code {
     left: 0;
     background: radial-gradient(
         circle at var(--x-faq-highlight) var(--y-faq-highlight),
-        rgba(78, 255, 71, 0.4) 0%,
-        rgba(0, 0, 0, 0.9) 10%, #000000 100%
+        rgba(67, 255, 129, 0.5) 0%,
+        rgba(0, 0, 0, 0.9) 7.5%, rgba(0, 0, 0, 0.9) 100%
     );
+}
+
+.faq-section::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 1); */
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(37, 45, 68, 0) 15%, rgba(89, 131, 252, 0) 85%, rgba(0, 0, 0, 1) 100%);
+}
+
+.featured-table-row {
+    background: rgba(53,53,53,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(53,53,53,0.25);
+    border-radius: var(--border-radius);
+}
+
+.table-cell {
+    display: grid;
+    place-items: center;
+}
+
+.final-cta-card {
+    padding: 1.4rem;
+    background: rgba(53,53,53,0.45);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(53,53,53,0.25);
+    border-radius: var(--border-radius);
+    width: 400px;
+}
+
+.final-cta-card.featured {
+    position: relative;
+}
+
+.final-cta-card.featured::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(ellipse farthest-corner at right top, hsla(165, 100%, 78%, 0.65) 0%, hsla(165, 68%, 62%, 0.25) 30%, transparent 50%, transparent 100%);
+    border-radius: inherit;
 }
 
 /* Style for the collapsible content such as faq commonly known as: accordion */
