@@ -253,23 +253,43 @@ var typedCardHeader = new Typed('#service-card-data-typed', {
 });
 
 /** faq animated radial gradient background */
+/** faq animated radial gradient background */
 const faqSectionBackground = document.querySelector('.faq-section');
 
-// Function to update the gradient position
+let cursorX = 0; // Track cursor's X position globally
+let cursorY = 0; // Track cursor's Y position globally
+
+// Function to update the gradient position based on mousemove
 const updateHighlightPosition = (e) => {
+  cursorX = e.clientX; // Store the cursor X position relative to the viewport
+  cursorY = e.clientY; // Store the cursor Y position relative to the viewport
+
   const rect = faqSectionBackground.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+  const x = cursorX - rect.left;
+  const y = cursorY - rect.top;
 
   faqSectionBackground.style.setProperty('--x-faq-highlight', `${x}px`);
   faqSectionBackground.style.setProperty('--y-faq-highlight', `${y}px`);
 };
 
-// Mousemove event to update the highlight based on mouse position
+// Function to adjust the gradient position on scroll
+const adjustHighlightOnScroll = () => {
+  const rect = faqSectionBackground.getBoundingClientRect();
+  const x = cursorX - rect.left; // Recalculate X based on stored cursor position
+  const y = cursorY - rect.top; // Recalculate Y based on stored cursor position
+
+  faqSectionBackground.style.setProperty('--x-faq-highlight', `${x}px`);
+  faqSectionBackground.style.setProperty('--y-faq-highlight', `${y}px`);
+};
+
+// Mousemove event to update cursor and gradient position
 faqSectionBackground.addEventListener('mousemove', updateHighlightPosition);
 
-// Handle mouse leave to reset highlight
+// Scroll event to adjust gradient position based on stored cursor
+window.addEventListener('scroll', adjustHighlightOnScroll);
+
+// Handle mouse leave to reset the highlight
 faqSectionBackground.addEventListener('mouseleave', () => {
-    faqSectionBackground.style.setProperty('--x-faq-highlight', `50%`);
-    faqSectionBackground.style.setProperty('--y-faq-highlight', `-100%`);
+  faqSectionBackground.style.setProperty('--x-faq-highlight', `50%`);
+  faqSectionBackground.style.setProperty('--y-faq-highlight', `-100%`);
 });

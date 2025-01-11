@@ -29,6 +29,7 @@
 html {
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -499,7 +500,7 @@ code.service-card-code {
     z-index: -1;
     top: 0;
     left: 0;
-    background-image: radial-gradient(ellipse farthest-corner at right top, hsla(165, 100%, 78%, 0.65) 0%, hsla(165, 68%, 62%, 0.25) 30%, transparent 50%, transparent 100%);
+    background-image: radial-gradient(ellipse farthest-corner at right top, hsla(165, 100%, 85%, 0.65) 0%, hsla(165, 86%, 67%, 0.25) 30%, transparent 65%, transparent 100%);
     border-radius: inherit;
 }
 
@@ -593,13 +594,14 @@ code.service-card-code {
 
 
 .animated-border::before,
-.animated-border::after  {
+.animated-border::after {
     content: "";
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
-    background: conic-gradient(from var(--rotate) at 50% 50%, #5dff78ff 0%, #4e00c2ff 25%, #bc48ffff 50%, #4e00c2ff 75%, #5dff78ff 100%);background-blend-mode: color-dodge;
-    /* background-image: linear-gradient(var(--rotate), #5dff78, #bc48ff 43%, #4e00c2); */
+    background: -webkit-conic-gradient(from var(--rotate) at 50% 50%, #5dff78ff 0%, #4e00c2ff 25%, #bc48ffff 50%, #4e00c2ff 75%, #5dff78ff 100%);
+    background: conic-gradient(from var(--rotate) at 50% 50%, #5dff78ff 0%, #4e00c2ff 25%, #bc48ffff 50%, #4e00c2ff 75%, #5dff78ff 100%);
+    background-blend-mode: color-dodge;
     position: absolute;
     z-index: -1;
     top: 0;

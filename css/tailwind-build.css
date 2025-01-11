@@ -1158,6 +1158,11 @@ video {
   line-height: 1.75rem;
 }
 
+.tw-text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .tw-font-medium {
   font-weight: 500;
 }
@@ -1460,6 +1465,10 @@ video {
 
   .md\:tw-min-h-\[65vh\] {
     min-height: 65vh;
+  }
+
+  .md\:tw-min-h-\[60vh\] {
+    min-height: 60vh;
   }
 
   .md\:tw-max-w-\[50\%\] {
