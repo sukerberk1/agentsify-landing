@@ -255,17 +255,21 @@ var typedCardHeader = new Typed('#service-card-data-typed', {
 /** faq animated radial gradient background */
 const faqSectionBackground = document.querySelector('.faq-section');
 
-faqSectionBackground.addEventListener('mousemove', e => {
+// Function to update the gradient position
+const updateHighlightPosition = (e) => {
   const rect = faqSectionBackground.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  faqSectionBackground.style.setProperty('--x-faq-highlight', x + 'px');
-  faqSectionBackground.style.setProperty('--y-faq-highlight', y + 'px');
-});
+  faqSectionBackground.style.setProperty('--x-faq-highlight', `${x}px`);
+  faqSectionBackground.style.setProperty('--y-faq-highlight', `${y}px`);
+};
 
-// Detect when the mouse leaves the faq-section
+// Mousemove event to update the highlight based on mouse position
+faqSectionBackground.addEventListener('mousemove', updateHighlightPosition);
+
+// Handle mouse leave to reset highlight
 faqSectionBackground.addEventListener('mouseleave', () => {
     faqSectionBackground.style.setProperty('--x-faq-highlight', `50%`);
     faqSectionBackground.style.setProperty('--y-faq-highlight', `-100%`);
-  });
+});

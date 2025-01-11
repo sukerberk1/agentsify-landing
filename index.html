@@ -745,15 +745,14 @@
             </div>
         </div>
 
-        <div class="tw-w-full tw-flex tw-flex-col tw-place-items-center tw-gap-8">
+        <div class="tw-w-full md:tw-max-w-[80%] tw-flex tw-flex-col tw-place-items-center tw-gap-24">
             <div class="tw-text-3xl max-md:tw-text-2xl tw-text-center">
                 Don't want to book a call but want more info?
             </div>
             <div class="tw-w-full lg:tw-grid tw-grid-cols-2 tw-flex tw-flex-col tw-items-stretch">
                 <div class="tw-flex tw-flex-col tw-gap-4 tw-max-w-[450px]">
                     <!-- Contact Form -->
-                    <form class="tw-flex tw-flex-col tw-gap-4" action="/submit-form" method="POST">
-                        <label for="name" class="tw-text-lg tw-font-medium">Your Name</label>
+                    <form class="contact-form tw-flex tw-flex-col tw-gap-10 tw-mx-4" action="/submit-form" method="POST">
                         <input
                             type="text"
                             id="name"
@@ -763,7 +762,6 @@
                             required
                         />
                         
-                        <label for="email" class="tw-text-lg tw-font-medium">Your Email</label>
                         <input
                             type="email"
                             id="email"
@@ -773,7 +771,6 @@
                             required
                         />
                         
-                        <label for="message" class="tw-text-lg tw-font-medium">Your Message</label>
                         <textarea
                             id="message"
                             name="message"

@@ -447,7 +447,7 @@ code.service-card-code {
     left: 0;
     background: radial-gradient(
         circle at var(--x-faq-highlight) var(--y-faq-highlight),
-        rgba(78, 255, 71, 0.7) 0%,
+        rgba(78, 255, 71, 0.4) 0%,
         rgba(0, 0, 0, 0.9) 10%, #000000 100%
     );
 }
@@ -480,6 +480,19 @@ code.service-card-code {
 .faq-accordion .active,
 .faq-accordion:hover {
     /* background-color: #2e2c2c; */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    border-radius: var(--border-radius);
+    padding: 0.6rem;
+    background-color: #191c29;
+    color: white;
+}
+
+.contact-form button {
+    border-radius: var(--border-radius);
+    background: linear-gradient(90deg, #6adf78 0%, #86d9d7 100%);
 }
 
 @media not all and (min-width: 1024px) {
