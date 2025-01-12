@@ -1530,6 +1530,18 @@ video {
     min-height: 500px;
   }
 
+  .lg\:tw-max-w-\[60\%\] {
+    max-width: 60%;
+  }
+
+  .lg\:tw-max-w-\[70\%\] {
+    max-width: 70%;
+  }
+
+  .lg\:tw-max-w-\[75\%\] {
+    max-width: 75%;
+  }
+
   .lg\:tw-flex-col {
     flex-direction: column;
   }
