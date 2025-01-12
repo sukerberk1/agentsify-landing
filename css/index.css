@@ -82,15 +82,12 @@ header>.collapsible-header {
 }
 
 .hero-section {
-    /* background-image: url("../assets/images/background/dots.svg"); */
-    background-position: center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: cover;
+    background: 0% 0% / 200px 200px repeat repeating-linear-gradient(to bottom left, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%), 0% 0% / 200px 200px repeat repeating-linear-gradient(to bottom right, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%), radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
 }
 
-#hero-video-overlay {
+#hero-overlay {
     position: absolute;
     min-width: 100%;
     min-height: 100vh;
@@ -100,6 +97,28 @@ header>.collapsible-header {
     background: #040605;
     background: -webkit-linear-gradient(0deg, #040604 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.25) 100%);
     background: linear-gradient(0deg, #040604 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+#earth {
+	position: absolute;
+	width: 500px; 
+    height: 500px;
+	touch-action: manipulation;
+    z-index: 5;
+    right: 0;
+    transform: translateX(25%) scale(0.9);
+}
+
+@media screen and (max-width: 1280px) {
+    #earth {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #earth {
+        transform: translateX(30%) scale(0.8);
+    }
 }
 
 #hero-video {
@@ -372,21 +391,21 @@ code.service-card-code {
 }
 
 .panel.first {
-    background: #474aff;
-    background: -webkit-linear-gradient(0deg, rgba(71, 74, 255, 0.75) 0%, transparent 50%);
-    background: linear-gradient(0deg, rgba(71, 74, 255, 0.75) 0%, transparent 50%);
+    background: #bc48ff;
+    background: -webkit-linear-gradient(0deg, rgba(255, 72, 249, 0.7) 0%, transparent 50%);
+    background: linear-gradient(0deg, rgba(255, 72, 249, 0.7) 0%, transparent 50%);
 }
 
 .panel.second {
-    background: #bc48ff;
-    background: -webkit-linear-gradient(0deg, rgba(255, 72, 249, 0.7) 0%, transparent 75%);
-    background: linear-gradient(0deg, rgba(255, 72, 249, 0.7) 0%, transparent 75%);
+    background: #474aff;
+    background: -webkit-linear-gradient(0deg, rgba(71, 74, 255, 0.75) 0%, transparent 75%);
+    background: linear-gradient(0deg, rgba(71, 74, 255, 0.75) 0%, transparent 75%);
 }
 
 .panel.third {
-    background: #30d49d;
-    background: -webkit-linear-gradient(0deg, rgba(48, 212, 122, 0.7) 0%, transparent 100%);
-    background: linear-gradient(0deg, rgba(48, 212, 122, 0.7) 0%, transparent 100%);
+    background: rgba(48, 212, 212, 0.7);
+    background: -webkit-linear-gradient(0deg, rgba(48, 212, 212, 0.7) 20%, transparent 100%);
+    background: linear-gradient(0deg, rgba(48, 212, 212, 0.7) 20%, transparent 100%);
     margin-bottom: 500px;
 }
 

@@ -49,12 +49,8 @@
     <section
         class="hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-mt-[50px] tw-z-10"
         id="hero-section">
-        <video autoplay muted loop id="hero-video">
-            <source src="./assets/video/hero-video.webm" type="video/webm">
-        </video>
-        <div id="hero-video-overlay">
-
-        </div>
+        <div id="hero-overlay"></div>
+        <canvas id="earth"></canvas>
         <div
             class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4">
             <div class="tw-flex tw-flex-col tw-place-content-center">
@@ -974,6 +970,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
 <script src="./index.js"></script>
+<script src="./earth.js"></script>
 
 </html>
