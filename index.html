@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SaaSy Dark</title>
+    <title>Agentsify</title>
     <meta name="description" content="" />
     <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
 
@@ -79,7 +79,7 @@
                         href="#services">
                         <span>Discover our services</span>
                     </a>
-                    <a class="btn animated-border" href="">
+                    <a class="btn animated-border" href="#booking">
                         Book a call
                     </a>
                 </div>
@@ -184,7 +184,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn animated-border" href="">
+                            <a class="btn animated-border" href="#booking">
                                 Book a call
                             </a>
                         </div>
@@ -223,7 +223,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn animated-border" href="">
+                            <a class="btn animated-border" href="#booking">
                                 Book a call
                             </a>
                         </div>
@@ -262,7 +262,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn animated-border" href="">
+                            <a class="btn animated-border" href="#booking">
                                 Book a call
                             </a>
                         </div>
@@ -372,7 +372,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="service-card reveal-up tw-col-span-3 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
+                <div class="service-card not-featured reveal-up tw-col-span-3 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] tw-flex-col tw-justify-between"
                     style="background: linear-gradient(15deg, rgba(0,0,0,0.8547794117647058) 50%, rgba(27,124,102,1) 100%, rgba(254,249,231,1) 100%);">
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-3xl max-md:tw-text-xl">
@@ -385,13 +385,13 @@
                             maximum efficiency and ROI.
                         </p>
                     </div>
-                    <!-- <div class="tw-text-4xl max-md:tw-text-2xl tw-h-[150px] lg:tw-flex lg:tw-justify-center">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/sheets.webm" type='video/webm' />
-                        </video>
-                    </div> -->
+                    <div class="tw-flex tw-justify-center">
+                        <a class="btn animated-border" href="#booking">
+                            Book a call
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card reveal-up tw-col-span-3 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
+                <div class="service-card not-featured reveal-up tw-col-span-3 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] tw-flex-col tw-justify-between"
                     style="background: linear-gradient(220deg, rgba(0,0,0,0.8547794117647058) 50%, rgb(17, 17, 17) 100%, rgba(254,249,231,1) 100%);">
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-3xl max-md:tw-text-xl">
@@ -404,14 +404,14 @@
                             accurate.
                         </p>
                     </div>
-                    <!-- <div class="tw-text-4xl max-md:tw-text-2xl tw-h-[150px] lg:tw-flex lg:tw-justify-center">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/ai-processor.webm" type='video/webm' />
-                        </video>
-                    </div> -->
+                    <div class="tw-flex tw-justify-center">
+                        <a class="btn animated-border" href="#booking">
+                            Book a call
+                        </a>
+                    </div>
                 </div>
                 <div
-                    class="service-card reveal-up tw-col-span-5 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center service-gradient-background">
+                    class="service-card reveal-up tw-col-span-5 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] tw-flex-col max-lg:tw-items-center service-gradient-background">
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-3xl max-md:tw-text-xl">
                             Data Management & Preparation
@@ -431,9 +431,9 @@
                             }
                         </code>
                         <div class="loader"></div>
-                        <span>
+                        <span class="tw-text-center">
                             <span class="tw-invisible">. <!-- dot here to persist the line height --> </span>
-                            <span id="service-card-data-typed" class="tw-text-center"></span>
+                            <span id="service-card-data-typed"></span>
                         </span>
                         <div id="service-card-data-typed-strings">
                             <p>Hello, World! Did you know that Agentsify rocks?</p>
@@ -457,7 +457,7 @@
                     </div>
                     <div class="tw-grid tw-place-items-center tw-w-full tw-grow">
                         <div class="tw-flex tw-items-center tw-justify-center tw-gap-14">
-                            <div class="tw-flex tw-flex-col tw-gap-4 tw-justify-around tw-items-center tw-text-gray-300">
+                            <div class="tw-hidden lg:tw-flex tw-flex-col tw-gap-4 tw-justify-around tw-items-center tw-text-gray-300">
                                 <div class="circle">
                                     <p>98%</p>
                                 </div>
@@ -469,7 +469,7 @@
                                 </div>
                                 <p class="tw-text-center tw-text-gray-200">Enhanced clients <br/>businesses</p>
                             </div>
-                            <div class="tw-flex tw-flex-col tw-gap-4 tw-justify-around tw-items-center tw-text-gray-300">
+                            <div class="tw-hidden lg:tw-flex tw-flex-col tw-gap-4 tw-justify-around tw-items-center tw-text-gray-300">
                                 <div class="circle">
                                     <p>96%</p>
                                 </div>
@@ -479,7 +479,7 @@
                         
                     </div>
                 </div>
-                <div class="service-card reveal-up tw-col-span-3 tw-min-h-32 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] lg:tw-flex-col max-lg:tw-flex-col max-lg:tw-items-center"
+                <div class="service-card not-featured reveal-up tw-col-span-3 tw-min-h-32 tw-row-span-1 tw-flex lg:tw-min-h-[500px] tw-gap-8 tw-rounded-xl tw-border-[1px] tw-border-outlineColor tw-bg-secondary tw-p-8 max-md:tw-w-[320px] tw-flex-col max-lg:tw-items-center tw-justify-between"
                 style="background: linear-gradient(150deg, rgba(0,0,0,0.8547794117647058) 50%, rgba(46, 46, 46, 0.7) 100%, rgba(254,249,231,1) 100%);">
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <h3 class="tw-text-3xl max-md:tw-text-xl">
@@ -491,11 +491,11 @@
                             strategies to operational insights, we prepare your workforce to maximize AI's potential.
                         </p>
                     </div>
-                    <!-- <div class="tw-text-4xl max-md:tw-text-2xl lg:tw-flex lg:tw-justify-center">
-                        <video loop muted autoplay>
-                            <source src="./assets/icons/animations/ai-bulb.webm" type='video/webm' />
-                        </video>
-                    </div> -->
+                    <div class="tw-flex tw-justify-center">
+                        <a class="btn animated-border" href="#booking">
+                            Book a call
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -510,7 +510,7 @@
             </svg>
         </div>
 
-        <div class="tw-w-full tw-mt-20 tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-center">
+        <div class="tw-w-full tw-relative tw-mt-20 tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-center">
             <h2 class="tw-text-5xl tw-font-medium max-md:tw-text-3xl">
                 <span id="technologies-header-typed"></span>
                 <div id="technologies-header-typed-strings">
@@ -654,7 +654,7 @@
     </section>
 
     <section
-        class="booking-section background-gradient  tw-z-50 tw-py-48 tw-bg-black tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6">
+        class="booking-section tw-z-50 tw-py-48 tw-bg-black tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6" id="booking">
         
         <div class="custom-shape-divider-top-1734972564">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
