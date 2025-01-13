@@ -81,10 +81,24 @@ header>.collapsible-header {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-section {
+/* .hero-section {
     background: 0% 0% / 200px 200px repeat repeating-linear-gradient(to bottom left, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%), 0% 0% / 200px 200px repeat repeating-linear-gradient(to bottom right, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%), radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%);
     background-blend-mode: multiply;
     background-attachment: fixed;
+} */
+
+.hero-section {
+    background: radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%), 
+                repeating-linear-gradient(to bottom left, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%);
+    background-size: 200px 200px, 200px 200px;
+    background-blend-mode: multiply;
+    background-attachment: fixed; /* Changed from fixed */
+}
+
+@supports (-webkit-touch-callout: none) {
+    .hero-section {
+        background: radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%); /* Simplified for iOS */
+    }
 }
 
 #hero-overlay {
