@@ -153,9 +153,23 @@ header>.collapsible-header {
 
 /* cards */
 .background-gradient {
-    background-color: hsl(0, 0%, 0%);
-    background-image: radial-gradient(circle farthest-side at center top, hsla(197, 61%, 75%, 0.6) 0%, hsl(0, 0%, 0%) 90%, hsl(0, 0%, 0%) 100%);
+    /* background: -webkit-linear-gradient(90deg, #6adf78 0%, #86d9d7 100%);
+    background: linear-gradient(90deg, #6adf78 0%, #86d9d7 100%); */
+    background-image: radial-gradient(circle farthest-side at center top, hsla(286, 100%, 61%, 0.6) 0%, hsl(0, 0%, 0%) 90%, hsla(0, 0%, 0%, 1) 100%);
+    position: relative;
     background-attachment: fixed;
+}
+
+
+.background-gradient::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    top: 0;
+    left: 0;
 }
 
 .card {
