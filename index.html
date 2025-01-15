@@ -184,7 +184,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn animated-border" href="#booking">
+                            <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
                                 Book a call
                             </a>
                         </div>
@@ -223,7 +223,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn animated-border" href="#booking">
+                            <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
                                 Book a call
                             </a>
                         </div>
@@ -262,7 +262,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn animated-border" href="#booking">
+                            <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
                                 Book a call
                             </a>
                         </div>
@@ -386,7 +386,7 @@
                         </p>
                     </div>
                     <div class="tw-flex tw-justify-center">
-                        <a class="btn animated-border" href="#booking">
+                        <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
                             Book a call
                         </a>
                     </div>
@@ -405,7 +405,7 @@
                         </p>
                     </div>
                     <div class="tw-flex tw-justify-center">
-                        <a class="btn animated-border" href="#booking">
+                        <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
                             Book a call
                         </a>
                     </div>
@@ -492,7 +492,7 @@
                         </p>
                     </div>
                     <div class="tw-flex tw-justify-center">
-                        <a class="btn animated-border" href="#booking">
+                        <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
                             Book a call
                         </a>
                     </div>
@@ -665,12 +665,19 @@
 
         <div
             class="reveal-up tw-flex tw-min-h-[60vh] tw-grid tw-grid-cols-2 max-lg:tw-flex max-lg:tw-flex-col max-lg:tw-gap-10 tw-place-content-center tw-place-items-center tw-gap-[10%] ">
-            <div class="tw-mt-6  tw-max-w-[450px] tw-flex-col tw-gap-4">
+            <div class="tw-mt-6 tw-max-w-[450px] tw-flex tw-flex-col tw-gap-8">
                 <h3 class="tw-text-5xl tw-font-medium max-md:tw-text-3xl">
                     Apply to partner with <span class="gradient-text">Agentsify.</span>
                 </h3>
-                <p class="tw-mt-4">Schedule a meeting with us and let's talk about how we can implement cutting-edge AI technology into your business.</p>
+                <div>
+                    <p class="tw-mt-4">Schedule a meeting with us and let's talk about how we can implement cutting-edge AI technology into your business.</p>
+                </div>
+                <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
+                    Book a call
+                </a>
+            </div>
 
+            <div class="tw-flex tw-flex-col tw-gap-10">
                 <div class="tw-mt-12 tw-flex tw-flex-col tw-gap-3">
                     <h4 class="tw-text-xl tw-font-medium">
                         <i class="bi bi-check-all !tw-text-2xl"></i>
@@ -704,24 +711,6 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="tw-flex">
-                <!-- Cal inline embed code begins -->
-                <div style="width:100%; max-height: 750px; overflow:scroll" id="my-cal-inline"></div>
-                <script type="text/javascript">
-                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                Cal("init", "15min", {origin:"https://cal.com"});
-
-                Cal.ns["15min"]("inline", {
-                    elementOrSelector:"#my-cal-inline",
-                    config: {"layout":"month_view"},
-                    calLink: "szymon-lisiecki-zsu3up/15min",
-                });
-
-                Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-                </script>
-                <!-- Cal inline embed code ends -->
-            </div>
         </div>
 
         
@@ -736,57 +725,47 @@
     <section
         class="faq-section tw-bg-black tw-z-50 tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-20 tw-p-[5%] tw-px-[10%]"
         id="faq">
-        <div class="tw-flex tw-flex-col tw-gap-20">
-            <h3 class="tw-text-4xl tw-font-medium tw-text-gray-300 max-md:tw-text-2xl tw-text-center">
-                Frequently Asked Questions
+
+        <div class="tw-w-full md:tw-max-w-[80%] tw-flex tw-flex-col tw-gap-20 tw-items-stretch">
+            <h3 class="tw-text-4xl max-md:tw-text-2xl tw-text-center">
+                Let us compare <span class="gradient-text">your options.</span>
             </h3>
-            <div class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4">
-                <div
-                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
-                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                        <span>What license are the source code?</span>
-                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+            <div>
+                <div class="tw-flex tw-flex-col tw-gap-2 tw-w-full tw-items-stretch tw-text-center">
+                    <div class="tw-h-[70px] tw-grid tw-grid-cols-5 tw-text-2xl tw-font-semibold tw-tracking-wide">
+                        <div></div>
+                        <div class="gradient-text table-cell">Agentsify</div>
+                        <div class="table-cell">AI Startup</div>
+                        <div class="table-cell">Software agency</div>
+                        <div class="table-cell">Freelancers</div>
                     </div>
-                    <div class="content">
-                        All the templates are under MIT license
+                    <div class="featured-table-row tw-h-[70px] tw-grid tw-grid-cols-5">
+                        <div class="tw-text-xl table-cell">Time to get results</div>
+                        <div class="table-cell">21-30 days</div>
+                        <div class="table-cell">3 Months</div>
+                        <div class="table-cell">2-4 Weeks</div>
+                        <div class="table-cell">3-6 Months</div>
                     </div>
-                </div>
-    
-                <div
-                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
-                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                        <span>Can I request new templates?</span>
-                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    <div class="tw-h-[70px] tw-grid tw-grid-cols-5">
+                        <div class="tw-text-xl table-cell">Failure rate</div>
+                        <div class="table-cell">Unlikely</div>
+                        <div class="table-cell">High</div>
+                        <div class="table-cell">Extremely high</div>
+                        <div class="table-cell">Unavoidable</div>
                     </div>
-                    <div class="content">
-                        you can request a generic template from
-                        <a href="https://github.com/PaulleDemon/landing-pages/issues/new/choose" class="tw-underline">
-                            Github template request</a>. If you are looking for Custom design you should
-                        <a href="https://tally.so/r/woO0Kx" class="tw-underline">contact here</a>
+                    <div class="featured-table-row tw-h-[70px] tw-grid tw-grid-cols-5">
+                        <div class="tw-text-xl table-cell">Price</div>
+                        <div class="table-cell">1 $</div>
+                        <div class="table-cell">10 $</div>
+                        <div class="table-cell">100 $</div>
+                        <div class="table-cell">1000 $</div>
                     </div>
-                </div>
-    
-                <div
-                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
-                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                        <span>I need a custom template?</span>
-                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
-                    </div>
-                    <div class="content">
-                        If you are looking for Custom design you can
-                        <a href="https://tally.so/r/woO0Kx" class="tw-underline">contact here</a>
-                    </div>
-                </div>
-    
-                <div
-                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
-                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                        <span>Will you add new templates?</span>
-                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
-                    </div>
-                    <div class="content">
-                        New templates are added every Friday. So star ⭐️
-                        <a href="https://github.com/PaulleDemon/awesome-landing-pages" class="tw-underline">Github</a>
+                    <div class="tw-h-[70px] tw-grid tw-grid-cols-5">
+                        <div class="tw-text-xl table-cell">Guarantees</div>
+                        <div class="table-cell"><i class="bi bi-check2-circle tw-text-2xl tw-text-green-500"></i></div>
+                        <div class="table-cell"><i class="bi bi-x-lg tw-text-2xl tw-text-gray-300"></i></div>
+                        <div class="table-cell"><i class="bi bi-x-lg tw-text-2xl tw-text-gray-300"></i></div>
+                        <div class="table-cell"><i class="bi bi-x-lg tw-text-2xl tw-text-gray-300"></i></div>
                     </div>
                 </div>
             </div>
@@ -845,53 +824,6 @@
 
         <hr/>
 
-        <div class="tw-w-full md:tw-max-w-[80%] tw-flex tw-flex-col tw-gap-20 tw-items-stretch">
-            <h3 class="tw-text-4xl max-md:tw-text-2xl tw-text-center">
-                Let us compare <span class="gradient-text">your options.</span>
-            </h3>
-            <div>
-                <div class="tw-flex tw-flex-col tw-gap-2 tw-w-full tw-items-stretch tw-text-center">
-                    <div class="tw-h-[70px] tw-grid tw-grid-cols-5 tw-text-2xl tw-font-semibold tw-tracking-wide">
-                        <div></div>
-                        <div class="gradient-text table-cell">Agentsify</div>
-                        <div class="table-cell">AI Startup</div>
-                        <div class="table-cell">Software agency</div>
-                        <div class="table-cell">Freelancers</div>
-                    </div>
-                    <div class="featured-table-row tw-h-[70px] tw-grid tw-grid-cols-5">
-                        <div class="tw-text-xl table-cell">Time to get results</div>
-                        <div class="table-cell">21-30 days</div>
-                        <div class="table-cell">3 Months</div>
-                        <div class="table-cell">2-4 Weeks</div>
-                        <div class="table-cell">3-6 Months</div>
-                    </div>
-                    <div class="tw-h-[70px] tw-grid tw-grid-cols-5">
-                        <div class="tw-text-xl table-cell">Failure rate</div>
-                        <div class="table-cell">Unlikely</div>
-                        <div class="table-cell">High</div>
-                        <div class="table-cell">Extremely high</div>
-                        <div class="table-cell">Unavoidable</div>
-                    </div>
-                    <div class="featured-table-row tw-h-[70px] tw-grid tw-grid-cols-5">
-                        <div class="tw-text-xl table-cell">Price</div>
-                        <div class="table-cell">1 $</div>
-                        <div class="table-cell">10 $</div>
-                        <div class="table-cell">100 $</div>
-                        <div class="table-cell">1000 $</div>
-                    </div>
-                    <div class="tw-h-[70px] tw-grid tw-grid-cols-5">
-                        <div class="tw-text-xl table-cell">Guarantees</div>
-                        <div class="table-cell"><i class="bi bi-check2-circle tw-text-2xl tw-text-green-500"></i></div>
-                        <div class="table-cell"><i class="bi bi-x-lg tw-text-2xl tw-text-gray-300"></i></div>
-                        <div class="table-cell"><i class="bi bi-x-lg tw-text-2xl tw-text-gray-300"></i></div>
-                        <div class="table-cell"><i class="bi bi-x-lg tw-text-2xl tw-text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr/>
-
         <div class="tw-flex tw-flex-col tw-gap-20 tw-w-full">
             <h3 class="tw-text-4xl tw-font-medium tw-text-gray-300 max-md:tw-text-2xl tw-text-center">
                 But why would you want to work with us?
@@ -920,7 +852,64 @@
                     </div> 
                 </div>
             </div>
-                
+        </div>
+
+        <hr/>
+
+        <div class="tw-flex tw-flex-col tw-gap-20">
+            <h3 class="tw-text-4xl tw-font-medium tw-text-gray-300 max-md:tw-text-2xl tw-text-center">
+                Frequently Asked Questions
+            </h3>
+            <div class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4">
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                        <span>What license are the source code?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        All the templates are under MIT license
+                    </div>
+                </div>
+    
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                        <span>Can I request new templates?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        you can request a generic template from
+                        <a href="https://github.com/PaulleDemon/landing-pages/issues/new/choose" class="tw-underline">
+                            Github template request</a>. If you are looking for Custom design you should
+                        <a href="https://tally.so/r/woO0Kx" class="tw-underline">contact here</a>
+                    </div>
+                </div>
+    
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                        <span>I need a custom template?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        If you are looking for Custom design you can
+                        <a href="https://tally.so/r/woO0Kx" class="tw-underline">contact here</a>
+                    </div>
+                </div>
+    
+                <div
+                    class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+                    <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                        <span>Will you add new templates?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        New templates are added every Friday. So star ⭐️
+                        <a href="https://github.com/PaulleDemon/awesome-landing-pages" class="tw-underline">Github</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </section>
