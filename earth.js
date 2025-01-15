@@ -1,7 +1,7 @@
 //(function(){
 	var AMOUNT=200, d=25, R=200, adjustment=true, adaptive=true,
 		obliquity=23/180*3.14, roV1=.0022, roV2=-.0005, ro1=0, ro2=0,
-		canvas='#earth', color='#420236', fogC='#722779', T_earth='https://mapplix.github.io/earth/earth.png';
+		canvas='#earth', color='#420236', fogC='#bc48ff', T_earth='https://mapplix.github.io/earth/earth.png';
 
 	var camera, scene, renderer;
 

@@ -25,7 +25,6 @@
     --card-width: 8rem;
 }
 
-
 html {
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
@@ -38,7 +37,6 @@ header {
     color: #000; */
     color: #b1b1b1;
 }
-
 
 header>.collapsible-header {
     display: flex;
@@ -54,7 +52,6 @@ header>.collapsible-header {
     transition: width 0.3s ease;
 }
 
-
 .header-links {
     display: flex;
     align-items: center;
@@ -63,7 +60,6 @@ header>.collapsible-header {
     padding: 5px 10px;
     transition: background-color 0.5s, color 0.5s;
 }
-
 
 .header-links:hover {
     color: #ffffff;
@@ -89,11 +85,28 @@ header>.collapsible-header {
 } */
 
 .hero-section {
-    background: radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%), 
-                repeating-linear-gradient(to bottom left, #4e6ab1ff 0% 10%, #91a3cfff 10% 20%, #adbadbff 20% 30%, #d8deeeff 30% 40%, #f4f6faff 40% 50%);
-    background-size: 200px 200px, 200px 200px;
-    background-blend-mode: multiply;
-    background-attachment: fixed; /* Changed from fixed */
+    --x-hero-highlight: 50%;
+    --y-hero-highlight: -100%;
+
+    position: relative;
+    background-image: linear-gradient(#d4d4d4 1px, transparent 1px), linear-gradient(to right, #d4d4d4 1px, transparent 1px);
+    background-size: 98px 98px;
+    background-color: #020202;
+    background-position: center;
+}
+
+.hero-section::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at var(--x-hero-highlight) var(--y-hero-highlight),
+            rgba(67, 255, 199, 1) 0%,
+            rgba(0, 0, 0, 0.9) 7.5%, rgba(0, 0, 0, 0.9) 100%);
+    mix-blend-mode: multiply;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -110,8 +123,8 @@ header>.collapsible-header {
     height: 100%;
     z-index: 0;
     background: #040605;
-    background: -webkit-linear-gradient(0deg, #040604 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.25) 100%);
-    background: linear-gradient(0deg, #040604 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.25) 100%);
+    background: -webkit-linear-gradient(0deg, black 0%, transparent 15%, transparent 100%);
+    background: linear-gradient(0deg, black 0%, transparent 15%, transparent 100%);
 }
 
 #earth {
@@ -122,6 +135,7 @@ header>.collapsible-header {
     z-index: 5;
     right: 0;
     transform: translateX(25%) scale(0.9);
+    filter: contrast(135%) brightness(80%);
 }
 
 @media screen and (max-width: 1280px) {

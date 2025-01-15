@@ -252,15 +252,53 @@ var typedCardHeader = new Typed('#service-card-data-typed', {
     backDelay: 5000
 });
 
-/** faq animated radial gradient background */
-/** faq animated radial gradient background */
-const faqSectionBackground = document.querySelector('.faq-section');
+/** HERO animated grid highlight radial gradient background */
+const heroSectionBackground = document.querySelector('.hero-section');
 
 let cursorX = 0; // Track cursor's X position globally
 let cursorY = 0; // Track cursor's Y position globally
 
 // Function to update the gradient position based on mousemove
-const updateHighlightPosition = (e) => {
+const updateHeroHighlightPosition = (e) => {
+  cursorX = e.clientX; // Store the cursor X position relative to the viewport
+  cursorY = e.clientY; // Store the cursor Y position relative to the viewport
+
+  const rect = heroSectionBackground.getBoundingClientRect();
+  const x = cursorX - rect.left;
+  const y = cursorY - rect.top;
+
+  heroSectionBackground.style.setProperty('--x-hero-highlight', `${x}px`);
+  heroSectionBackground.style.setProperty('--y-hero-highlight', `${y}px`);
+};
+
+// Function to adjust the gradient position on scroll
+const adjustHeroHighlightOnScroll = () => {
+  const rect = heroSectionBackground.getBoundingClientRect();
+  const x = cursorX - rect.left; // Recalculate X based on stored cursor position
+  const y = cursorY - rect.top; // Recalculate Y based on stored cursor position
+
+  heroSectionBackground.style.setProperty('--x-hero-highlight', `${x}px`);
+  heroSectionBackground.style.setProperty('--y-hero-highlight', `${y}px`);
+};
+
+// Mousemove event to update cursor and gradient position
+heroSectionBackground.addEventListener('mousemove', updateHeroHighlightPosition);
+
+// Scroll event to adjust gradient position based on stored cursor
+window.addEventListener('scroll', adjustHeroHighlightOnScroll);
+
+// Handle mouse leave to reset the highlight
+heroSectionBackground.addEventListener('mouseleave', () => {
+    heroSectionBackground.style.setProperty('--x-hero-highlight', `50%`);
+    heroSectionBackground.style.setProperty('--y-hero-highlight', `-100%`);
+});
+
+
+/** FAQ animated grid highlight radial gradient background */
+const faqSectionBackground = document.querySelector('.faq-section');
+
+// Function to update the gradient position based on mousemove
+const updateFaqHighlightPosition = (e) => {
   cursorX = e.clientX; // Store the cursor X position relative to the viewport
   cursorY = e.clientY; // Store the cursor Y position relative to the viewport
 
@@ -273,7 +311,7 @@ const updateHighlightPosition = (e) => {
 };
 
 // Function to adjust the gradient position on scroll
-const adjustHighlightOnScroll = () => {
+const adjustFaqHighlightOnScroll = () => {
   const rect = faqSectionBackground.getBoundingClientRect();
   const x = cursorX - rect.left; // Recalculate X based on stored cursor position
   const y = cursorY - rect.top; // Recalculate Y based on stored cursor position
@@ -283,10 +321,10 @@ const adjustHighlightOnScroll = () => {
 };
 
 // Mousemove event to update cursor and gradient position
-faqSectionBackground.addEventListener('mousemove', updateHighlightPosition);
+faqSectionBackground.addEventListener('mousemove', updateFaqHighlightPosition);
 
 // Scroll event to adjust gradient position based on stored cursor
-window.addEventListener('scroll', adjustHighlightOnScroll);
+window.addEventListener('scroll', adjustFaqHighlightOnScroll);
 
 // Handle mouse leave to reset the highlight
 faqSectionBackground.addEventListener('mouseleave', () => {

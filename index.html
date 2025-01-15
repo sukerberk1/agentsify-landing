@@ -79,7 +79,7 @@
                         href="#services">
                         <span>Discover our services</span>
                     </a>
-                    <a class="btn animated-border" href="#booking">
+                    <a class="btn animated-border" data-cal-link="szymon-lisiecki-zsu3up/15min" data-cal-namespace="15min" data-cal-config='{"layout":"month_view"}'>
                         Book a call
                     </a>
                 </div>
@@ -706,7 +706,21 @@
             </div>
 
             <div class="tw-flex">
-                Here goes cal.com calendar
+                <!-- Cal inline embed code begins -->
+                <div style="width:100%; max-height: 750px; overflow:scroll" id="my-cal-inline"></div>
+                <script type="text/javascript">
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "15min", {origin:"https://cal.com"});
+
+                Cal.ns["15min"]("inline", {
+                    elementOrSelector:"#my-cal-inline",
+                    config: {"layout":"month_view"},
+                    calLink: "szymon-lisiecki-zsu3up/15min",
+                });
+
+                Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                </script>
+                <!-- Cal inline embed code ends -->
             </div>
         </div>
 
@@ -959,6 +973,21 @@
         </div>
     </footer>
 </body>
+
+<!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "15min", {origin:"https://cal.com"});
+  
+    
+    // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+    // `data-cal-link="szymon-lisiecki-zsu3up/15min"`
+    // data-cal-namespace="15min"
+    // `data-cal-config='{"layout":"month_view"}'`
+  
+    Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+<!-- Cal element-click embed code ends -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
     integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
