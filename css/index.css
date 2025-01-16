@@ -395,8 +395,8 @@ code.service-card-code {
 }
 
 #technologies>div>img {
-    -webkit-filter: drop-shadow(0px 2px 0 white) drop-shadow(0px -1px 0 white) drop-shadow(1px 0px 0 white) drop-shadow(-1px 0px 0 white);
-    filter: drop-shadow(0px 2px 0 white) drop-shadow(0px -1px 0 white) drop-shadow(2px 0px 0 white) drop-shadow(-1px 0px 0 white);
+    -webkit-filter: drop-shadow(0px 1px 0 white) drop-shadow(0px -1px 0 white) drop-shadow(1px 0px 0 white) drop-shadow(-1px 0px 0 white);
+    filter: drop-shadow(0px 1px 0 white) drop-shadow(0px -1px 0 white) drop-shadow(1px 0px 0 white) drop-shadow(-1px 0px 0 white);
 }
 
 @media screen and (min-width: 1024px) {
@@ -566,6 +566,7 @@ code.service-card-code {
     border: 1px solid rgba(53, 53, 53, 0.25);
     border-radius: var(--border-radius);
     width: 400px;
+    flex-grow: 1;
 }
 
 .final-cta-card.featured {
