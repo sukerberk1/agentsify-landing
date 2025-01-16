@@ -203,12 +203,13 @@ for (var i=0; i<slides.length; i++) {
         .addTo(controller2);
 }
 
+const standardSpeed = 35;
 
 /** typing animations */
 var typedHero = new Typed('#hero-typed', {
     stringsElement: '#hero-typed-strings',
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: standardSpeed,
+    backSpeed: standardSpeed,
     // showCursor: false,
     loop: true,
     backDelay: 2000
@@ -217,8 +218,8 @@ var typedHero = new Typed('#hero-typed', {
 /** typing animations */
 var typedCardHeader = new Typed('#cards-header-typed', {
     stringsElement: '#cards-header-typed-strings',
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: standardSpeed,
+    backSpeed: standardSpeed,
     // showCursor: false,
     loop: true,
     backDelay: 2000
@@ -227,8 +228,8 @@ var typedCardHeader = new Typed('#cards-header-typed', {
 /** typing animations */
 var typedCardHeader = new Typed('#technologies-header-typed', {
     stringsElement: '#technologies-header-typed-strings',
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: standardSpeed,
+    backSpeed: standardSpeed,
     // showCursor: false,
     loop: true,
     backDelay: 2000
@@ -236,8 +237,8 @@ var typedCardHeader = new Typed('#technologies-header-typed', {
 
 var typedCardHeader = new Typed('#service-chat-message-bot-typed', {
     stringsElement: '#service-chat-message-bot-typed-strings',
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: standardSpeed,
+    backSpeed: standardSpeed,
     showCursor: false,
     loop: true,
     backDelay: 2000
@@ -245,8 +246,8 @@ var typedCardHeader = new Typed('#service-chat-message-bot-typed', {
 
 var typedCardHeader = new Typed('#service-card-data-typed', {
     stringsElement: '#service-card-data-typed-strings',
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: standardSpeed,
+    backSpeed: standardSpeed,
     showCursor: false,
     loop: true,
     backDelay: 5000
