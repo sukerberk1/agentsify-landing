@@ -111,7 +111,8 @@ header>.collapsible-header {
 
 @supports (-webkit-touch-callout: none) {
     .hero-section {
-        background: radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%); /* Simplified for iOS */
+        background: radial-gradient(farthest-corner at 50% 50%, #db24c0ff 0%, #184295ff 100%);
+        /* Simplified for iOS */
     }
 }
 
@@ -128,10 +129,10 @@ header>.collapsible-header {
 }
 
 #earth {
-	position: absolute;
-	width: 500px; 
+    position: absolute;
+    width: 500px;
     height: 500px;
-	touch-action: manipulation;
+    touch-action: manipulation;
     z-index: 5;
     right: 0;
     transform: translateX(25%) scale(0.9);
@@ -368,10 +369,12 @@ code.service-card-code {
     padding: 0.6rem;
     text-align: center;
 }
+
 @media screen and (max-width: 1024px) {
     .service-card {
         min-height: 60vh;
     }
+
     .service-card.not-featured {
         min-height: fit-content;
     }

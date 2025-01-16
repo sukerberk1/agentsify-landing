@@ -164,15 +164,15 @@ items.forEach((item, index) => {
 var controller = new ScrollMagic.Controller();
 
 var revealElements = document.getElementsByClassName("tech-logo");
-for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+for (var i = 0; i < revealElements.length; i++) { // create a scene for each element
     new ScrollMagic.Scene({
-                        triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-                        offset: ((i % 6) + 1) *10,												 // start a little later
-                        triggerHook: 0.9,
-                    })
-                    .setClassToggle(revealElements[i], "visible") // add class toggle
-                    // .addIndicators({name: "logo " + (i+1) }) // add indicators (requires plugin)
-                    .addTo(controller);
+        triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+        offset: ((i % 6) + 1) * 10,												 // start a little later
+        triggerHook: 0.9,
+    })
+        .setClassToggle(revealElements[i], "visible") // add class toggle
+        // .addIndicators({name: "logo " + (i+1) }) // add indicators (requires plugin)
+        .addTo(controller);
 }
 
 /** section wipes  */
@@ -190,15 +190,15 @@ var controller2 = new ScrollMagic.Controller({
 var slides = document.querySelectorAll("section.panel");
 
 // create scene for every slide
-for (var i=0; i<slides.length; i++) {
+for (var i = 0; i < slides.length; i++) {
     new ScrollMagic.Scene({
-            triggerElement: slides[i]
-        })
+        triggerElement: slides[i]
+    })
         .setPin(slides[i], {
-            pushFollowers: false, 
-            spacerClass: `gradient-panel-pin-spacer-${i+1}`
+            pushFollowers: false,
+            spacerClass: `gradient-panel-pin-spacer-${i + 1}`
         })
-        .setClassToggle(`#slide-header-${i+1}`, "visible")
+        .setClassToggle(`#slide-header-${i + 1}`, "visible")
         // .addIndicators() // add indicators (requires plugin)
         .addTo(controller2);
 }
@@ -261,25 +261,25 @@ let cursorY = 0; // Track cursor's Y position globally
 
 // Function to update the gradient position based on mousemove
 const updateHeroHighlightPosition = (e) => {
-  cursorX = e.clientX; // Store the cursor X position relative to the viewport
-  cursorY = e.clientY; // Store the cursor Y position relative to the viewport
+    cursorX = e.clientX; // Store the cursor X position relative to the viewport
+    cursorY = e.clientY; // Store the cursor Y position relative to the viewport
 
-  const rect = heroSectionBackground.getBoundingClientRect();
-  const x = cursorX - rect.left;
-  const y = cursorY - rect.top;
+    const rect = heroSectionBackground.getBoundingClientRect();
+    const x = cursorX - rect.left;
+    const y = cursorY - rect.top;
 
-  heroSectionBackground.style.setProperty('--x-hero-highlight', `${x}px`);
-  heroSectionBackground.style.setProperty('--y-hero-highlight', `${y}px`);
+    heroSectionBackground.style.setProperty('--x-hero-highlight', `${x}px`);
+    heroSectionBackground.style.setProperty('--y-hero-highlight', `${y}px`);
 };
 
 // Function to adjust the gradient position on scroll
 const adjustHeroHighlightOnScroll = () => {
-  const rect = heroSectionBackground.getBoundingClientRect();
-  const x = cursorX - rect.left; // Recalculate X based on stored cursor position
-  const y = cursorY - rect.top; // Recalculate Y based on stored cursor position
+    const rect = heroSectionBackground.getBoundingClientRect();
+    const x = cursorX - rect.left; // Recalculate X based on stored cursor position
+    const y = cursorY - rect.top; // Recalculate Y based on stored cursor position
 
-  heroSectionBackground.style.setProperty('--x-hero-highlight', `${x}px`);
-  heroSectionBackground.style.setProperty('--y-hero-highlight', `${y}px`);
+    heroSectionBackground.style.setProperty('--x-hero-highlight', `${x}px`);
+    heroSectionBackground.style.setProperty('--y-hero-highlight', `${y}px`);
 };
 
 // Mousemove event to update cursor and gradient position
@@ -300,25 +300,25 @@ const faqSectionBackground = document.querySelector('.faq-section');
 
 // Function to update the gradient position based on mousemove
 const updateFaqHighlightPosition = (e) => {
-  cursorX = e.clientX; // Store the cursor X position relative to the viewport
-  cursorY = e.clientY; // Store the cursor Y position relative to the viewport
+    cursorX = e.clientX; // Store the cursor X position relative to the viewport
+    cursorY = e.clientY; // Store the cursor Y position relative to the viewport
 
-  const rect = faqSectionBackground.getBoundingClientRect();
-  const x = cursorX - rect.left;
-  const y = cursorY - rect.top;
+    const rect = faqSectionBackground.getBoundingClientRect();
+    const x = cursorX - rect.left;
+    const y = cursorY - rect.top;
 
-  faqSectionBackground.style.setProperty('--x-faq-highlight', `${x}px`);
-  faqSectionBackground.style.setProperty('--y-faq-highlight', `${y}px`);
+    faqSectionBackground.style.setProperty('--x-faq-highlight', `${x}px`);
+    faqSectionBackground.style.setProperty('--y-faq-highlight', `${y}px`);
 };
 
 // Function to adjust the gradient position on scroll
 const adjustFaqHighlightOnScroll = () => {
-  const rect = faqSectionBackground.getBoundingClientRect();
-  const x = cursorX - rect.left; // Recalculate X based on stored cursor position
-  const y = cursorY - rect.top; // Recalculate Y based on stored cursor position
+    const rect = faqSectionBackground.getBoundingClientRect();
+    const x = cursorX - rect.left; // Recalculate X based on stored cursor position
+    const y = cursorY - rect.top; // Recalculate Y based on stored cursor position
 
-  faqSectionBackground.style.setProperty('--x-faq-highlight', `${x}px`);
-  faqSectionBackground.style.setProperty('--y-faq-highlight', `${y}px`);
+    faqSectionBackground.style.setProperty('--x-faq-highlight', `${x}px`);
+    faqSectionBackground.style.setProperty('--y-faq-highlight', `${y}px`);
 };
 
 // Mousemove event to update cursor and gradient position
@@ -329,6 +329,6 @@ window.addEventListener('scroll', adjustFaqHighlightOnScroll);
 
 // Handle mouse leave to reset the highlight
 faqSectionBackground.addEventListener('mouseleave', () => {
-  faqSectionBackground.style.setProperty('--x-faq-highlight', `50%`);
-  faqSectionBackground.style.setProperty('--y-faq-highlight', `-100%`);
+    faqSectionBackground.style.setProperty('--x-faq-highlight', `50%`);
+    faqSectionBackground.style.setProperty('--y-faq-highlight', `-100%`);
 });
