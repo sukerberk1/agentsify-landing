@@ -378,6 +378,10 @@ code.service-card-code {
     .service-card.not-featured {
         min-height: fit-content;
     }
+
+    .service-card-media-container {
+        min-height: 250px;
+    }
 }
 
 /** tech stack section */
@@ -570,6 +574,13 @@ code.service-card-code {
     border-radius: var(--border-radius);
     width: 400px;
     flex-grow: 1;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .final-cta-card {
+        width: 100%;
+    }
 }
 
 .final-cta-card.featured {
