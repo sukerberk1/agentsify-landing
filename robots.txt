@@ -1,0 +1,23 @@
+# robots.txt for Agentsify
+
+# Allow all content to be crawled by search engines
+User-agent: *
+Disallow:
+
+# Block unnecessary admin and server-related directories
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /scripts/
+Disallow: /private/
+
+# Block sensitive query parameters (if applicable)
+Disallow: /*?sessionid=
+Disallow: /*?token=
+
+# Allow search engines to crawl important resources
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap for search engine indexing
+Sitemap: https://www.agentsify.ai/sitemap.xml
