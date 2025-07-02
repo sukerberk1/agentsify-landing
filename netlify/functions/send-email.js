@@ -16,7 +16,7 @@ export async function handler(event, context) {
 
         await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: ['vaishnavimantri01@gmail.com'],
+            to: ['stan@agentsify.ai'],
             subject: `[Contact Form] ${subject}`,
             html: `
             <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
