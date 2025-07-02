@@ -16,7 +16,7 @@ export async function handler(event) {
     try {
         await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: 'vaishnavimantri01@gmail.com',
+            to: 'stan@agentsify.ai',
             subject: 'New Newsletter Subscription',
             html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
