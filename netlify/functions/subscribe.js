@@ -22,7 +22,7 @@ export async function handler(event) {
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
         <h2 style="color: #333;">📬 New Newsletter Subscription</h2>
         <p style="font-size: 16px; color: #555;">
-        Hello there! 👋, I hope you are doing well.
+        Hello there!, I hope you are doing well.
         </p>
         <p style="font-size: 16px; color: #555;">
         Great news! Someone just subscribed to your newsletter.
@@ -40,7 +40,7 @@ export async function handler(event) {
         </p>
         <p style="font-size: 16px; color: #555; margin-top: 30px;">
         Warm regards,<br />
-        Your Website Bot 🤖
+        Your Website Bot 
         </p>
     </div>
     `
