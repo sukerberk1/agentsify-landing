@@ -86,7 +86,7 @@ const AboutUs = () => {
         {
             year: 'Q2 2025',
             title: 'Early Adopters',
-            description: 'Trying our AI agents with select clients, receiving positive feedback.',
+            description: 'Implementing our AI agents with select clients, receiving positive feedback.',
             icon: <Users size={20} />,
             color: 'from-green-400 to-teal-500'
         }
@@ -573,9 +573,9 @@ const AboutUs = () => {
 
                             <div className="text-center">
                                 <h3 className="text-xl font-bold text-white mb-1">Chandra Yadav </h3>
-                                <p className="text-[#00f0ff] font-semibold mb-3">Growth Marketer</p>
+                                <p className="text-[#00f0ff] font-semibold mb-3">CRO</p>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    Chandra drives marketing efforts by building a scalable lead engine to accelerate client acquisition
+                                    Chandra drives marketing & revenue efforts by leveraging his scalable lead engine to accelerate client acquisition
                                 </p>
                             </div>
 
