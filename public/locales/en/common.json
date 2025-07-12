@@ -1,0 +1,526 @@
+{
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "translate": "Translate",
+    "call": "Call",
+    "menu": "Menu",
+    "hero section": {
+        "badgeText": "Trusted AI solutions for",
+        "businessCount": "10+",
+        "businessSuffix": "satisfied companies",
+        "headlinePrefix": "We build an AI",
+        "headlineMiddle": "Agent tailored for your",
+        "taglines": {
+            "efficiency": "team's efficiency.",
+            "enterprise": "enterprise",
+            "goals": "project goals."
+        },
+        "homepara": "We specialize in developing, auditing, and consulting custom AI solutions \ndesigned to meet the unique challenges of modern businesses. Our \nsolutions are not just intelligent they're practical and built for real-world complexity.",
+        "exploreAIServices": "Explore\u00A0AI\u00A0Services"
+    },
+    "whyagentsify": {
+        "question1": "Why does my business need an <span class=\"gradient-text\">AI Agent</span>?",
+        "question2": "How can <span class=\"gradient-text\">AI Agents</span> transform my business operations?",
+        "question3": "What makes <span class=\"text-white font-semibold\">Agentsify</span> <span class=\"gradient-text\">AI services</span> the right choice?",
+        "para1": "Discover how our tailored AI solutions empower businesses to drive growth, improve efficiency, and foster innovation.",
+        "tiles": {
+            "automation": {
+                "category": "Intelligent Automation",
+                "title1": "Automate",
+                "title2": "Repetitive Business",
+                "title3": "Tasks Efficiently",
+                "description": "Leverage cutting-edge AI technology to streamline processes, save time, and reduce errors. Our automation solutions free up your team for strategic growth while ensuring optimal efficiency and accuracy.",
+                "features": [
+                    "Automate complex workflows",
+                    "Enhance operational efficiency",
+                    "Minimize human errors"
+                ]
+            },
+            "service": {
+                "category": "Service Quality",
+                "title1": "Enhance and Innovate",
+                "title2": "Your Service with AI",
+                "description": "Drive unparalleled service quality with AI-powered solutions designed to automate repetitive tasks, optimize workflows, and ensure precision. Empower your business to achieve excellence in every operation.",
+                "features": [
+                    "Automate time-consuming tasks",
+                    "Improve operational efficiency",
+                    "Minimize human errors"
+                ]
+            },
+            "cost": {
+                "category": "Cost Efficiency",
+                "title1": "Reduce Operational",
+                "title2": "Costs with AI",
+                "title3": "Solutions",
+                "description": "Leverage AI to minimize operational expenses, streamline processes, and achieve cost-effective scalability. By automating key tasks, businesses can save time, reduce errors, and focus on growth opportunities.",
+                "features": [
+                    "Reduce operational expenses",
+                    "Increase productivity rates",
+                    "Maximize return on investment"
+                ]
+            }
+        },
+        "scheuldeacall": "Schedule a call"
+    },
+    "casestudies": {
+        "exploreourHeading": "Explore Our",
+        "caseStudiesHeading": "Case Studies",
+        "description": " Discover how our tailored AI solutions have transformed businesses by driving efficiency,innovation, and growth. From improving processes to expanding client bases, our case studies showcase measurable success and real-world impact.",
+        "benefits": [
+            {
+                "texts": [
+                    "Boost efficiency by 250%",
+                    "Increase productivity dramatically",
+                    "Streamline operations efficiently"
+                ]
+            },
+            {
+                "texts": [
+                    "Innovate service offerings",
+                    "Create cutting-edge solutions",
+                    "Transform business models"
+                ]
+            },
+            {
+                "texts": [
+                    "Address critical business challenges",
+                    "Solve complex problems",
+                    "Overcome operational hurdles"
+                ]
+            }
+        ]
+    },
+    "brands": {
+        "aiHighlights": [
+            {
+                "text": "Discover what powers",
+                "highlight": "Agentsify"
+            },
+            {
+                "text": "Unveiling the",
+                "highlight": "AI technology stack"
+            },
+            {
+                "text": "Explore tools behind",
+                "highlight": "AI innovation"
+            }
+        ],
+        "aiBrandspara": "Learn about the advanced AI tools and technologies we leverage to deliver exceptional results for our clients."
+    },
+    "partners": {
+        "partnersheading": "Insights from Our Partners!",
+        "partnerspara": "Don't just take our words for it, take a look at our work as well.",
+        "buttonpartnerwithus": "Partner With Us",
+        "buttonViewAll": "View All"
+    },
+    "partnership": {
+        "partnershipheading1": "Partner with",
+        "partnershipheading2": "Agentsify",
+        "partnershipheading3": "to unlock AI-driven growth",
+        "partnershippara": "Schedule a consultation with our team to explore how integrating cutting-edge AI technology can elevate your business operations.",
+        "partnershipbutton": "Book a meeting",
+        "partnershipRHSHeading": "This is the perfect partnership if you aim to:",
+        "AgentsifyPartnershipp1": "Automate business processes",
+        "AgentsifyPartnershipp2": "Increase operational efficiency",
+        "AgentsifyPartnershipp3": "Minimize human error",
+        "partnershipRHSHeading2": "This might not be a good fit if:",
+        "NonParntershipp1": "You're not ready to innovate",
+        "NonParntershipp2": "You prefer traditional methods",
+        "NonParntershipp3": "You're not focused on long-term growth"
+    },
+    "comparisonTableData": [
+        {
+            "category": "Time to Deliver Results",
+            "agentsify": "21-30 Days",
+            "aiStartup": "3 Months",
+            "softwareAgency": "2-4 Weeks",
+            "freelancers": "3-6 Months"
+        },
+        {
+            "category": "Failure Rate",
+            "agentsify": "Low",
+            "aiStartup": "High",
+            "softwareAgency": "Very High",
+            "freelancers": "Unpredictable"
+        },
+        {
+            "category": "Price (Relative)",
+            "agentsify": "Affordable",
+            "aiStartup": "Moderate",
+            "softwareAgency": "Expensive",
+            "freelancers": "Highly Variable"
+        },
+        {
+            "category": "Guarantees",
+            "agentsify": true,
+            "aiStartup": false,
+            "softwareAgency": false,
+            "freelancers": false
+        }
+    ],
+    "comparisonTableHeading1": "Compare your",
+    "comparisonTableHeading2": "options",
+    "comparisonTableHeading3": "for AI solutions",
+    "ComparisonTableCol1": "Agentsify",
+    "ComparisonTableCol2": "AI Startup",
+    "ComparisonTableCol3": "Software Agency",
+    "ComparisonTableCol4": "Freelancers",
+    "ComparisonTableCol0": "Categories",
+    "readytextpart1": "Ready to experience the",
+    "readytextpart2": "Agentsify",
+    "readytextpart3": "difference?",
+    "getbutton": "Get Started Today",
+    "comparsionbetweenAgentsify": {
+        "WAgentsifypart1": "Why choose ",
+        "WAgentsifypart2": "Agentsify",
+        "WAgentsifypart3": "over other agencies?",
+        "otherAgenciesData": [
+            "High failure rate",
+            "Expensive services",
+            "Slow project delivery",
+            "Lack of guarantees or accountability"
+        ],
+        "OtherAgenciestitle": "Other Agencies",
+        "agentsifyData": [
+            "Industry-leading low failure rate",
+            "Affordable solutions tailored to your needs",
+            "Rapid delivery timelines",
+            "Solid guarantees for your peace of mind"
+        ]
+    },
+    "faqData": [
+        {
+            "question": "What is Agentsify's mission?",
+            "answer": "Agentsify is committed to empowering businesses by integrating cutting-edge AI solutions that save time, reduce errors, and automate workflows for maximum efficiency and growth."
+        },
+        {
+            "question": "Can I request custom AI solutions for my business?",
+            "answer": " Absolutely ! At Agentsify, we specialize in creating tailored AI solutions. Reach out via our contact form or book a meeting with us, and our team will work with you to develop a custom solution that meets your business needs."
+        },
+        {
+            "question": "Do you offer ongoing support and updates?",
+            "answer": "Yes, we provide continuous support to ensure your AI solutions perform optimally. Updates and enhancements are also part of our service to keep your tools aligned with the latest advancements in AI technology."
+        },
+        {
+            "question": "How quickly can I see results with Agentsify?",
+            "answer": " With Agentsify, most clients start seeing results within 21-30 days. Our streamlined processes and efficient tools ensure fast and effective outcomes for your business."
+        },
+        {
+            "question": "What industries does Agentsify serve?",
+            "answer": " Agentsify serves a wide range of industries, including healthcare, finance, e-commerce, and logistics. Our versatile AI tools are designed to adapt to the unique needs of any business."
+        }
+    ],
+    "faqtitletext": "Frequently Asked Questions about",
+    "faqtitletext2": "Agentsify ?",
+    "starttitle": "Start Building Your AI Agents!",
+    "startpara": "Create powerful AI agents effortlessly and efficiently. Transform your workflow with intelligent automation.",
+    "tryagentsifybutton": "Try Agentsify Now",
+    "footerpara1": "Let's build your AI future together.",
+    "stayupdatedtext": "Stay Updated",
+    "suscribetext": "Subscribe to receive the latest updates and AI insights",
+    "subscribeButton": "Subscribe",
+    "subscribeSuccess": "Successfully subscribed!",
+    "partnerprogramheading": "PARTNER PROGRAM",
+    "partnerprogrampara": "Join mission, Share success.",
+    "becomeapartnertext": "Become a Partner",
+    "followustext": "Follow Us",
+    "servicestab": {
+        "heading1": "Unlock the Power of ",
+        "heading2": "Agentsify",
+        "subheading": "Transform your business with our comprehensive AI solutions designed for the future",
+        "tile1title": "AI Solution Development: Tailored to Your Business",
+        "tile1description": "Turn your vision into reality with custom-built AI solutions. At Agentsify, we specialize in developing AI-powered systems that address your unique business challenges. From machine learning models to predictive analytics and natural language processing tools, we deliver end-to-end solutions. Our seamless approach ensures that every AI application we build is aligned with your goals and optimized for success.",
+        "tile2title": "Comprehensive AI Strategy Consulting",
+        "tile2description": "Harness the true potential of AI with a strategy designed for your business success. At Agentsify, we identify key opportunities for AI integration by understanding your unique goals and challenges. Our consulting services deliver actionable roadmaps to seamlessly implement AI solutions, driving efficiency, innovation, and ROI.",
+        "tile3title": "Advanced AI Model Optimization & Maintenance",
+        "tile3description": "Keep your AI models high-performing and future-ready with Agentsify's expert optimization and maintenance services. We specialize in algorithm fine-tuning, adapting to evolving data trends, and enhancing model efficiency. By aligning your AI systems with your business goals, we ensure they remain relevant, accurate, and impactful.",
+        "tile4title": "Comprehensive AI Data Management & Preparation",
+        "tile4description": "Unlock the full potential of your data with Agentsify's AI Data Management services. Our experts clean, organize, and integrate raw datasets to ensure they meet the highest standards for AI model training. By focusing on data quality, compliance, and scalability, we lay the groundwork for smarter decision-making and faster AI deployments.",
+        "tile5title": "Custom AI Training Programs",
+        "tile5description": "Equip your team with the skills to harness AI's full potential. At Agentsify, we deliver personalized AI training programs tailored to your business needs. From mastering AI tools to implementing best practices, we ensure your workforce is prepared to integrate AI into everyday operations for maximum efficiency and innovation.",
+        "tile6title": "AI Monitoring & Support",
+        "tile6description": "Maximize your AI performance with Agentsify’s proactive monitoring and 24/7 support. Our team ensures your AI systems stay reliable, efficient, and ahead of the curve by identifying and resolving issues before they impact your operations. Enjoy peace of mind with real-time insights and expert support tailored to your business needs.",
+        "servicestatsheadingtab": "Our Transformative Impact",
+        "servicestatspara": "Delivering exceptional results through cutting-edge AI solutions and innovative approaches.",
+        "statslabel1": "Client satisfaction rate's",
+        "statslabel2": "Businesses enhanced through AI",
+        "statslabel3": "Processes improved dramatically",
+        "statsbutton": "Discover Our Solutions"
+    },
+    "casestudiestab": {
+        "heading": "What We've Delivered",
+        "subpara": "Transforming complex business challenges into intelligent AI solutions.Explore our portfolio of innovative automation that drives measurable results.",
+        "filters": [
+            {
+                "key": "all",
+                "label": "All Projects"
+            },
+            {
+                "key": "AI Automation",
+                "label": "AI Automation"
+            },
+            {
+                "key": "Legal Tech",
+                "label": "Legal Tech"
+            }
+        ],
+        "caseStudiestiles": [
+            {
+                "id": 1,
+                "title": "AI Agent for Office",
+                "category": "AI Automation",
+                "image": "../guarantee-office.jpg",
+                "tileBackground": "bg-gradient-to-br from-white to-gray-25",
+                "buttonGradient": "from-emerald-500 to-teal-500",
+                "description": "Developed an AI agent that processes thousands of diverse, unstructured warranty reports monthly, transforming manual workflows.",
+                "metrics": [
+                    {
+                        "label": "Time Savings",
+                        "value": ">90%",
+                        "icon": "Clock"
+                    },
+                    {
+                        "label": "Defect Detection",
+                        "value": "~100%",
+                        "icon": "Shield"
+                    },
+                    {
+                        "label": "Processing Speed",
+                        "value": "20 sec/doc",
+                        "icon": "Zap"
+                    }
+                ],
+                "problems": [
+                    "Thousands of diverse, unstructured reports monthly",
+                    "Critical information could be lost in rigid, systematized formats",
+                    "Manual report processing takes valuable expert time",
+                    "Mistakes during manual processing could lead to issues being unnoticed"
+                ],
+                "solutions": [
+                    "AI agent independently processes variety of reports (PDFs, images, handwritten text)",
+                    "Automated analytics for decision makers",
+                    "24/7 fast processing",
+                    "Employees now play auditor role, focusing on strategic work"
+                ],
+                "developmentTime": "7 days",
+                "detaileddescription": "Working with the company's warranty office, we developed a thorough understanding of the problem and designed a prototype in just 7 days. The AI agent processes diverse report formats including PDFs, images, and handwritten text with near-perfect accuracy. The system provides 24/7 automated processing, completing each document in just 20 seconds while maintaining over 90% effectiveness in detecting defects. This transformation shifted employees from repetitive manual work to strategic auditing roles, eliminating hundreds of hours of repetitive tasks and associated costs."
+            },
+            {
+                "id": 2,
+                "title": "Legal Document Intelligence",
+                "category": "Legal Tech",
+                "image": "./legal-department.jpg",
+                "tileBackground": "bg-gradient-to-br from-indigo-50 to-purple-50",
+                "buttonGradient": "from-indigo-500 to-purple-500",
+                "description": "Revolutionized legal document processing with AI Agent for a major legal department.",
+                "metrics": [
+                    {
+                        "label": "Time Saved",
+                        "value": " >80%",
+                        "icon": "Clock"
+                    },
+                    {
+                        "label": "Number of Documents",
+                        "value": "9000",
+                        "icon": "FileText"
+                    },
+                    {
+                        "label": "Accuracy",
+                        "value": "90%",
+                        "icon": "CheckCircle"
+                    }
+                ],
+                "problems": [
+                    "Hundreds of legal documents requiring manual review",
+                    "Preparation of Legal documents is time-consuming and error-prone",
+                    "Difficulty analysis of court documents",
+                    "High error rates in clause identification and analysis"
+                ],
+                "solutions": [
+                    "AI Agent that helps with clause extraction and categorization",
+                    "Time Savings in searching for information in the legal documents database"
+                ],
+                "developmentTime": "14 days",
+                "detaileddescription": "Our legal AI system transforms how legal departments handle contract review and analysis. The platform automatically extracts key clauses, identifies potential risks, and provides comprehensive regulatory requirements. Lawyers can now focus on strategic legal advice while the AI handles routine document processing, resulting in faster turnaround times and more consistent quality across all legal work."
+            }
+        ],
+        "cta": {
+            "heading": "Ready to Transform Your Business Process?",
+            "subpara": "From legal document processing to warranty management, we can automate your complex workflows in days, not months. Let's discuss your automation needs.",
+            "button": "Start Your AI Project"
+        },
+        "modal": {
+            "problemsHeading": "Problems Statement",
+            "solutionsHeading": "Solutions Implemented",
+            "overviewHeading": "Project Overview",
+            "outcomesHeading": "Key Outcomes",
+            "viewCaseStudy": "View Case Study",
+            "prototypeLabel": "Prototype"
+        }
+    },
+    "AboutUsTab": {
+        "heading": "Who We Are ?",
+        "subheading": "We're a team of passionate innovators dedicated to transforming ideas into reality and creating meaningful impact through technology.",
+        "discoverbuttonText": "Discover Our Journey",
+        "section2Heading": "Our Foundation",
+        "visonheading": "Vision",
+        "visionpara": "To be the global leader in intelligent automation, shaping the future of AI-driven business solutions.",
+        "missionheading": "Mission",
+        "missionpara": "To empower businesses worldwide by democratizing access to cutting-edge AI technology, making intelligent automation accessible to all.",
+        "goalsheading": "Goals",
+        "goalspara": "Expand presence across international markets to establish leadership in intelligent automation.",
+        "section2para": " These three pillars form the foundation of everything we do at Agentsify.Our vision guides our direction, our mission drives our purpose, and our goals shape our future.",
+        "timelineHeading": "Our Journey So Far",
+        "timelineSubheading": "From founding to early adoption - here's how we've grown since our founding in 2024.",
+        "timelineItems": [
+            {
+                "year": "Q4 2024",
+                "title": "The Beginning",
+                "description": "Founded Agentsify with a vision to make AI accessible to every business.",
+                "icon": "Lightbulb",
+                "color": "from-yellow-400 to-orange-500"
+            },
+            {
+                "year": "Q1 2025",
+                "title": "First MVP",
+                "description": "Completed our first AI agent prototype and secured initial funding.",
+                "icon": "Rocket",
+                "color": "from-blue-400 to-blue-500"
+            },
+            {
+                "year": "Q2 2025",
+                "title": "Early Adopters",
+                "description": "Creating first AI agents for select clients, gaining experience in complex IT environments.",
+                "icon": "Users",
+                "color": "from-green-400 to-teal-500"
+            },
+            {
+                "year": "Q3 2025",
+                "title": "First Successes",
+                "description": "Achieving promising productivity gains with a diverse range of bespoke AI agents.",
+                "icon": "CheckCircle",
+                "color": "from-red-400 to-red-500"
+            }
+        ],
+        "values": [
+            {
+                "letter": "A",
+                "title": "Agile",
+                "description": "We adapt quickly and deliver with speed and flexibility.",
+                "color": "from-purple-500 to-pink-500"
+            },
+            {
+                "letter": "G",
+                "title": "Growth-Focused",
+                "description": "We drive sustainable growth and continuous evolution.",
+                "color": "from-blue-500 to-cyan-500"
+            },
+            {
+                "letter": "E",
+                "title": "Excellence",
+                "description": "We maintain the highest standards in everything we do.",
+                "color": "from-green-500 to-teal-500"
+            },
+            {
+                "letter": "N",
+                "title": "Next-Generation",
+                "description": "We leverage cutting-edge technology to build the future.",
+                "color": "from-yellow-500 to-orange-500"
+            },
+            {
+                "letter": "T",
+                "title": "Trustworthy",
+                "description": "We build lasting relationships through transparency.",
+                "color": "from-red-500 to-pink-500"
+            },
+            {
+                "letter": "S",
+                "title": "Solution-Oriented",
+                "description": "We focus on solving real problems with innovation.",
+                "color": "from-indigo-500 to-purple-500"
+            }
+        ],
+        "ValuesHeading": "Our Core Values",
+        "AgentsifyWay": "= Agentsify Way",
+        "teamHeading": "Meet Our Team",
+        "teamsubheading": "The passionate minds behind Agentsify, working together to revolutionize AI automation.",
+        "teammember1name": "Stan",
+        "teammember1role": "Founder & CEO",
+        "teammember1description": "Stan, our CEO & Founder, leads with a practical, hands-on approach to execution and team focus.",
+        "teammember2name": "Cyril Leonov",
+        "teammember2role": "COO",
+        "teammember2description": "Kirill, our COO, ensures strategic priorities are aligned and drives business growth opportunities.",
+        "teammember3name": "Evgeny Demidovich",
+        "teammember3role": "CTO",
+        "teammember3description": "Evgeny, our CTO, ensures we choose the right technologies and use them effectively to build robust, scalable solutions.",
+        "teammember4name": "Wolfgang Eigner",
+        "teammember4role": "CMO",
+        "teammember4description": "Wolfgang, our CMO, leads our marketing strategy and shapes how we connect with and engage our clients.",
+        "teammember5name": "Szymon Lisiecki",
+        "teammember5role": "Co-Founder",
+        "teammember5description": "Szymon, our Co-founder, brings deep technical expertise and a passion for crafting innovative solutions that push boundaries.",
+        "teammember6name": "Axel Mengara",
+        "teammember6role": "Founding Engineer",
+        "teammember6description": "Axel holds a PhD in AI & Data Science and brings over 8 years of experience delivering end-to-end AI solutions.",
+        "teammember7name": "Krzysztof Szymanski",
+        "teammember7role": "Founding Engineer",
+        "teammember7description": "Krzysztof is a seasoned tech leader with 15+ years of experience translating business needs into impactful digital solutions.",
+        "teammember8name": "Chris Kinsman ",
+        "teammember8role": "Founding Engineer",
+        "teammember8description": "Chris is a full-stack developer focused on building robust AI applications and seamless user experiences.",
+        "teammember9name": "Paul Amnuaypayoat",
+        "teammember9role": "Founding Engineer",
+        "teammember9description": "Paul is an experienced software engineer with a passion for building scalable, high-performance AI solutions.",
+        "teammember10name": "Chandra Yadav",
+        "teammember10role": "Growth Marketer",
+        "teammember10description": "Chandra drives marketing efforts by building a scalable lead engine to accelerate client acquisition.",
+        "teammember11name": "Vaishnavi Mantri",
+        "teammember11role": "Founding Engineer",
+        "teammember11description": "Vaishnavi is an AI engineer shaping intelligent systems through innovation and academic rigor.",
+        "teammember12name": "Karani Niemczycki",
+        "teammember12role": "Vice President of Sales",
+        "teammember12description": "Karani leads our sales strategy, building strong client relationships and driving business growth.",
+        "readyToRevolutionizeheading": "Ready to revolutionize your workflow?",
+        "readyToRevolutionizetext": "Talk to our Sales team today to get started.",
+        "demobutton": "Request a Demo",
+        "freeconsultationtext": "Free 30-minute consultation",
+        "Nocommitmentrequiredtext": "No commitment required",
+        "getstartedtext": "Get started in 24 hours"
+    },
+    "contactustab": {
+        "contactusheadingpart1": "Get in",
+        "contactusheadingpart2": "Touch",
+        "contactuspara": "Ready to transform your business with AI? We're here to help you every step of the way.Let's discuss how Agentsify can accelerate your success.",
+        "messageformtitle": "Send us a Message",
+        "messageformdescription": "Fill out the form below and we'll get back to you within 24 hours.",
+        "suceessmessagetext": "Message sent successfully! We'll get back to you soon.",
+        "errorMessagetext": "Failed to send message. Please try again or contact us directly.",
+        "Namefield": "Name",
+        "Emailfield": "Email Address",
+        "Subjectfield": "Subject",
+        "Messagefield": "Message",
+        "sendbutton": "Send Message",
+        "errortext1": "Please fill out all the required fields.",
+        "errortext2": "Please enter a valid full name (only letters, min 2 characters).",
+        "errortext3": "Please enter a valid email address.",
+        "errortext4": "Subject should be between 5 and 100 characters.",
+        "errortext5": "Message should be at least 10 characters.",
+        "reachouttext": "Reach out to us",
+        "emailtext": "Get in touch via email",
+        "scheuldeacall": "Click below to schedule a call:",
+        "bookacall": "Book a Call",
+        "locationtext": "Location",
+        "locationpara": "Serving clients globally",
+        "whychooseAgentsifytext": "Why Choose Agentsify?",
+        "Supporttext": "24/7 Support",
+        "Supportpara": "Round-the-clock assistance",
+        "quicktext": "Quick Implementation",
+        "quickpara": "Get started in 24-48 hours",
+        "securitytext": "Enterprise Security",
+        "securitypara": "Data safety you can trust",
+        "ratingtext": "5-Star Rating",
+        "ratingpara": "Trusted by companies worldwide"
+    }
+}
