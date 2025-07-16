@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import TopLeftImg from "../components/TopLeftImg";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -32,11 +31,8 @@ const Layout = ({ children }) => {
         <meta property="og:image" content="/logo-small-black.png"></meta>
       </Head>
 
-      <TopLeftImg />
       <Nav />
       <Header />
-
-
       {children}
     </main>
   );
