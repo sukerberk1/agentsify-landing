@@ -32,6 +32,7 @@
     "@next/codemod": "^15.3.3",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
+    "@wellyshen/use-web-animations": "^0.9.1",
     "bootstrap-icons": "^1.13.1",
     "framer-motion": "^12.16.0",
     "i18next": "^25.3.0",
@@ -47,9 +48,11 @@
     "react-i18next": "^15.5.3",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.3",
+    "react-tsparticles": "^2.12.2",
     "resend": "^4.6.0",
     "swiper": "^9.4.0",
     "tailwind-scrollbar": "^3.0.5",
+    "tsparticles": "^3.8.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

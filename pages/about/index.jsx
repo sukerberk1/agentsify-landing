@@ -433,13 +433,12 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-
                         {/* Team Member 6 - */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
 
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
-                                    <span className="text-2xl font-bold text-white">AM</span>
+                                    <span className="text-2xl font-bold text-white">CY</span>
                                 </div>
                                 <div className="absolute -inset-1 bg-gradient-to-r from-red-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -456,34 +455,35 @@ const AboutUs = () => {
                         {/* Team Member 7 - */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <div className="relative mb-6">
-                                <div className="w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
-                                    <span className="text-2xl font-bold text-white">KS</span>
+                                <div className="w-24 h-24 bg-gradient-to-br from-[#00f0ff] to-purple-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
+                                    <span className="text-2xl font-bold text-white">KN</span>
                                 </div>
                                 <div className="absolute -inset-1 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
 
                             <div className="text-center">
-                                <h3 className="text-xl font-bold text-white mb-1">   {t('AboutUsTab.teammember7name')} </h3>
-                                <p className="text-indigo-400 font-semibold mb-3">{t('AboutUsTab.teammember7role')}   </p>
+                                <h3 className="text-xl font-bold text-white mb-1">  {t('AboutUsTab.teammember7name')} </h3>
+                                <p className="text-[#00f0ff] font-semibold mb-3"> {t('AboutUsTab.teammember7role')}</p>
                                 <p className="text-gray-300 text-sm leading-relaxed">
                                     {t('AboutUsTab.teammember7description')}
                                 </p>
                             </div>
-
                         </div>
 
                         {/* Team Member 8 - */}
+
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+
                             <div className="relative mb-6">
-                                <div className="w-24 h-24 bg-gradient-to-br from-emerald-500 to-orange-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
-                                    <span className="text-2xl font-bold text-white">CK</span>
+                                <div className="w-24 h-24 bg-gradient-to-br from-[#ACE1AF] rounded-full flex items-center justify-center mx-auto shadow-xl">
+                                    <span className="text-2xl font-bold text-white">AM</span>
                                 </div>
-                                <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="absolute -inset-1 bg-gradient-to-r from-red-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
 
                             <div className="text-center">
-                                <h3 className="text-xl font-bold text-white mb-1">   {t('AboutUsTab.teammember8name')} </h3>
-                                <p className="text-[#ff00ff] font-semibold mb-3"> {t('AboutUsTab.teammember8role')}  </p>
+                                <h3 className="text-xl font-bold text-white mb-1">  {t('AboutUsTab.teammember8name')} </h3>
+                                <p className="text-[#ACE1AF] font-semibold mb-3">  {t('AboutUsTab.teammember8role')} </p>
                                 <p className="text-gray-300 text-sm leading-relaxed">
                                     {t('AboutUsTab.teammember8description')}
                                 </p>
@@ -495,7 +495,7 @@ const AboutUs = () => {
 
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-[#a0f0ff] to-pink-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
-                                    <span className="text-2xl font-bold text-white">PA</span>
+                                    <span className="text-2xl font-bold text-white">VM</span>
                                 </div>
                                 <div className="absolute -inset-1 bg-gradient-to-r from-red-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
@@ -511,59 +511,21 @@ const AboutUs = () => {
 
 
                         {/* Team Member 10 - */}
-                        <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                            <div className="relative mb-6">
-                                <div className="w-24 h-24 bg-gradient-to-br from-[#00f0ff] to-purple-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
-                                    <span className="text-2xl font-bold text-white">CY</span>
-                                </div>
-                                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-
-                            <div className="text-center">
-                                <h3 className="text-xl font-bold text-white mb-1">  {t('AboutUsTab.teammember10name')} </h3>
-                                <p className="text-[#00f0ff] font-semibold mb-3"> {t('AboutUsTab.teammember10role')}</p>
-                                <p className="text-gray-300 text-sm leading-relaxed">
-                                    {t('AboutUsTab.teammember10description')}
-                                </p>
-                            </div>
-
-                        </div>
-
-                        {/* Team Member 11 - */}
-
-                        <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-
-                            <div className="relative mb-6">
-                                <div className="w-24 h-24 bg-gradient-to-br from-[#ACE1AF] rounded-full flex items-center justify-center mx-auto shadow-xl">
-                                    <span className="text-2xl font-bold text-white">VM</span>
-                                </div>
-                                <div className="absolute -inset-1 bg-gradient-to-r from-red-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-
-                            <div className="text-center">
-                                <h3 className="text-xl font-bold text-white mb-1">  {t('AboutUsTab.teammember11name')} </h3>
-                                <p className="text-[#ACE1AF] font-semibold mb-3">  {t('AboutUsTab.teammember11role')} </p>
-                                <p className="text-gray-300 text-sm leading-relaxed">
-                                    {t('AboutUsTab.teammember11description')}
-                                </p>
-                            </div>
-                        </div>
-                        {/* Team Member 12 - */}
 
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
 
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-[#A8F1FF] to-pink-200 rounded-full flex items-center justify-center mx-auto shadow-xl">
-                                    <span className="text-2xl font-bold text-white">KN</span>
+                                    <span className="text-2xl font-bold text-white">PA</span>
                                 </div>
                                 <div className="absolute -inset-1 bg-gradient-to-r from-red-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
 
                             <div className="text-center">
-                                <h3 className="text-xl font-bold text-white mb-1"> {t('AboutUsTab.teammember12name')}  </h3>
-                                <p className="text-[#9FB3DF] font-semibold mb-3"> {t('AboutUsTab.teammember12role')}   </p>
+                                <h3 className="text-xl font-bold text-white mb-1"> {t('AboutUsTab.teammember10name')}  </h3>
+                                <p className="text-[#9FB3DF] font-semibold mb-3"> {t('AboutUsTab.teammember10role')}   </p>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    {t('AboutUsTab.teammember12description')}
+                                    {t('AboutUsTab.teammember10description')}
                                 </p>
                             </div>
                         </div>
@@ -588,7 +550,6 @@ const AboutUs = () => {
                     <p className="text-xl lg:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                         {t('AboutUsTab.readyToRevolutionizetext')}
                     </p>
-
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button className="group bg-gradient-to-r from-[#8a95e0] to-[#6f7acb] hover:from-[#8a95e0] to-[#6f7acb] text-gray-900 px-8 py-3 rounded-full font-bold text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-500/20"
