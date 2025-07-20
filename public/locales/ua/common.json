@@ -272,8 +272,8 @@
                 "title": "Агент AI для офісу",
                 "category": "Автоматизація ШІ",
                 "image": "../guarantee-office.jpg",
-                "tileBackground": "bg-gradient-to-br from-white to-gray-25",
-                "buttonGradient": "from-emerald-500 to-teal-500",
+                "tileBackground": "bg-white",
+                "buttonGradient": "from-gray-900 to-gray-100",
                 "description": "Розробив агента на основі штучного інтелекту, який щомісяця обробляє тисячі різноманітних неструктурованих гарантійних звітів.",
                 "metrics": [
                     {
@@ -312,8 +312,8 @@
                 "title": "Юридичні документи",
                 "category": "Юридичні технології",
                 "image": "../legal-department.jpg",
-                "tileBackground": "bg-gradient-to-br from-indigo-50 to-purple-50",
-                "buttonGradient": "from-indigo-500 to-purple-500",
+                "tileBackground": "bg-white",
+                "buttonGradient": "from-gray-900 to-gray-100",
                 "description": "Революційна обробка юридичних документів за допомогою Агент ШІ для великого юридичного відділу.",
                 "metrics": [
                     {

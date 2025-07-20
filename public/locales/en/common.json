@@ -272,8 +272,8 @@
                 "title": "AI Agent for Office",
                 "category": "AI Automation",
                 "image": "../guarantee-office.jpg",
-                "tileBackground": "bg-gradient-to-br from-white to-gray-25",
-                "buttonGradient": "from-emerald-500 to-teal-500",
+                "tileBackground": "bg-white",
+                "buttonGradient": "from-gray-900 to-gray-100",
                 "description": "Developed an AI agent that processes thousands of diverse, unstructured warranty reports monthly, transforming manual workflows.",
                 "metrics": [
                     {
@@ -312,8 +312,8 @@
                 "title": "Legal Document Intelligence",
                 "category": "Legal Tech",
                 "image": "./legal-department.jpg",
-                "tileBackground": "bg-gradient-to-br from-indigo-50 to-purple-50",
-                "buttonGradient": "from-indigo-500 to-purple-500",
+                "tileBackground": "bg-white",
+                "buttonGradient": "from-gray-900 to-gray-100",
                 "description": "Revolutionized legal document processing with AI Agent for a major legal department.",
                 "metrics": [
                     {

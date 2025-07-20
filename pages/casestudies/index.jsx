@@ -175,7 +175,7 @@ const CaseStudiesTab = () => {
 
                       <div className="p-6">
                         <div className="flex items-center justify-between mb-3">
-                          <span className="text-xs font-semibold text-gray-950 bg-gray-200/60 px-2 py-1 rounded-full">
+                          <span className="text-xs font-semibold text-black bg-gray-300/60 px-2 py-1 rounded-full">
                             {caseStudy.category}
                           </span>
                         </div>
@@ -203,7 +203,7 @@ const CaseStudiesTab = () => {
 
                         <button
                           onClick={() => setSelectedCase(caseStudy)}
-                          className={`w-full bg-gradient-to-r ${caseStudy.buttonGradient} hover:brightness-110 text-black font-semibold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center hover:shadow-lg hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white text-sm`}
+                          className="w-full bg-gray-500 hover:bg-gray-400 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center hover:shadow-lg hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white text-sm"
                         >
                           {modalData.viewCaseStudy || 'View Case Study'}
                           <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
