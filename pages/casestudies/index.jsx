@@ -203,7 +203,7 @@ const CaseStudiesTab = () => {
 
                         <button
                           onClick={() => setSelectedCase(caseStudy)}
-                          className={`w-full bg-gradient-to-r ${caseStudy.buttonGradient} hover:brightness-110 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center hover:shadow-lg hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white text-sm`}
+                          className={`w-full bg-gradient-to-r ${caseStudy.buttonGradient} hover:brightness-110 text-black font-semibold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center hover:shadow-lg hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-white text-sm`}
                         >
                           {modalData.viewCaseStudy || 'View Case Study'}
                           <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -261,7 +261,7 @@ const CaseStudiesTab = () => {
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{selectedCase.title}</h2>
                   <div className="flex items-center gap-4">
-                    <span className={`${selectedCase.category === 'Legal Tech' ? 'text-indigo-400' : 'text-emerald-400'} text-lg font-medium`}>{selectedCase.category}</span>
+                    <span className={`${selectedCase.category === 'Legal Tech' ? 'text-indigo-400' : 'text-emerald-400'} text-medium font-medium bg-white px-2 py-1 border-full`}>{selectedCase.category}</span>
                     {selectedCase.developmentTime && (
                       <span className="text-white/60 text-sm bg-white/10 px-3 py-1 rounded-full">
                         {modalData.prototypeLabel}: {selectedCase.developmentTime}
