@@ -328,7 +328,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            <section className="py-12 bg-gradient-to-br from-slate-800 via-indigo-900/20 to-slate-900 relative">
+            {/* <section className="py-12 bg-gradient-to-br from-slate-800 via-indigo-900/20 to-slate-900 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
                     <div className="text-center mb-10">
                         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -340,7 +340,7 @@ const AboutUs = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                        {/* Team Member 1 - CEO */}
+
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
@@ -358,7 +358,6 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-                        {/* Team Member 2 - COO */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
@@ -377,7 +376,6 @@ const AboutUs = () => {
 
                         </div>
 
-                        {/* Team Member 3 */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
@@ -396,7 +394,6 @@ const AboutUs = () => {
 
                         </div>
 
-                        {/* Team Member 4  */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
@@ -415,7 +412,6 @@ const AboutUs = () => {
 
                         </div>
 
-                        {/* Team Member 5 - Co-Founder */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-[#0066ff] to-pink-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
@@ -433,7 +429,6 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-                        {/* Team Member 6 - */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
 
                             <div className="relative mb-6">
@@ -452,7 +447,6 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-                        {/* Team Member 7 - */}
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <div className="relative mb-6">
                                 <div className="w-24 h-24 bg-gradient-to-br from-[#00f0ff] to-purple-500 rounded-full flex items-center justify-center mx-auto shadow-xl">
@@ -470,7 +464,6 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-                        {/* Team Member 8 - */}
 
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
 
@@ -490,7 +483,7 @@ const AboutUs = () => {
                             </div>
                         </div>
 
-                        {/* Team Member 9 - */}
+
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
 
                             <div className="relative mb-6">
@@ -508,9 +501,6 @@ const AboutUs = () => {
                                 </p>
                             </div>
                         </div>
-
-
-                        {/* Team Member 10 - */}
 
                         <div className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
 
@@ -532,7 +522,7 @@ const AboutUs = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="py-10 bg-gradient-to-r from-slate-900 via-gray-900 to-slate-900 relative overflow-hidden">
 
