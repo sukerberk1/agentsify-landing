@@ -230,12 +230,9 @@ const ContactUs = () => {
                         <a href="mailto:stan@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
                           stan@agentsify.ai
                         </a>
-                        <a href="mailto:kirill@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
-                          kirill@agentsify.ai
-                        </a>
-                        <a href="mailto:szymon@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
-                          karani@agentsify.ai
-                        </a>
+                        {/* <a href="mailto:szymon@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
+                          szymon@agentsify.ai
+                        </a> */}
                       </div>
                     </div>
                   </div>
