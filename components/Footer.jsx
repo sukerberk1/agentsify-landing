@@ -23,7 +23,6 @@ export default function AgentsifyFooter() {
         setIsLoading(true);
 
         try {
-            // Create form data for Netlify Forms
             const formData = new FormData();
             formData.append('form-name', 'newsletter-subscription');
             formData.append('email', email);
@@ -73,8 +72,10 @@ export default function AgentsifyFooter() {
     return (
         <div className="bg-gradient-to-br from-slate-700 via-purple-700 to-slate-700">
 
-            <form name="newsletter-subscription" netlify="true" hidden>
-                <input type="email" name="email" />
+            {/* Hidden form for Netlify detection - matches the detection HTML exactly */}
+            <form name="newsletter-subscription" data-netlify="true" hidden>
+                <input type="hidden" name="form-name" value="newsletter-subscription" />
+                <input name="email" type="email" />
             </form>
 
             <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-slate-800">
@@ -99,7 +100,8 @@ export default function AgentsifyFooter() {
                                             <span className="font-medium">Successfully subscribed!</span>
                                         </div>
                                     ) : (
-                                        <form onSubmit={handleSubscribe} className="space-y-2">
+                                        <form onSubmit={handleSubscribe} className="space-y-2" data-netlify="true" name="newsletter-subscription">
+                                            <input type="hidden" name="form-name" value="newsletter-subscription" />
                                             <div className="relative">
                                                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400" />
                                                 <input

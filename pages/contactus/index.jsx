@@ -69,7 +69,8 @@ const ContactUs = () => {
       netlifyFormData.append('subject', subject);
       netlifyFormData.append('message', message);
 
-      const response = await fetch('/', {
+      // Updated: Submit to the static HTML file instead of root
+      const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(netlifyFormData).toString()
@@ -109,7 +110,6 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-
       <section className="relative pt-32 pb-16 px-6 sm:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-blue-900/30"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -125,7 +125,6 @@ const ContactUs = () => {
       <section className="py-16 px-6 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
-
             <div className="relative">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
                 <h2 className="text-3xl font-bold text-white mb-2">  {t('contactustab.messageformtitle')}  </h2>
@@ -145,16 +144,8 @@ const ContactUs = () => {
                   </div>
                 )}
 
-                <form name="contact" netlify="true" hidden>
-                  <input type="text" name="Name" />
-                  <input type="email" name="email" />
-                  <input type="text" name="subject" />
-                  <textarea name="message"></textarea>
-                </form>
-
-                <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-                  <input type="hidden" name="form-name" value="contact" />
-
+                {/* Updated: Remove the netlify form attributes from the main form */}
+                <form onSubmit={handleSubmit}>
                   <div className="space-y-6">
                     <div>
                       <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Namefield')}  *</label>
@@ -230,6 +221,7 @@ const ContactUs = () => {
               </div>
             </div>
 
+            {/* Rest of your component remains the same */}
             <div className="space-y-8">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
                 <h2 className="text-2xl font-bold text-white mb-6">  {t('contactustab.reachouttext')}  </h2>
