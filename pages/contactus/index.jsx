@@ -62,12 +62,17 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/.netlify/functions/send-email', {
+      const netlifyFormData = new FormData();
+      netlifyFormData.append('form-name', 'contact');
+      netlifyFormData.append('Name', Name);
+      netlifyFormData.append('email', email);
+      netlifyFormData.append('subject', subject);
+      netlifyFormData.append('message', message);
+
+      const response = await fetch('/', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(netlifyFormData).toString()
       });
 
       if (response.ok) {
@@ -117,7 +122,6 @@ const ContactUs = () => {
         </div>
       </section>
 
-
       <section className="py-16 px-6 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
@@ -141,77 +145,88 @@ const ContactUs = () => {
                   </div>
                 )}
 
-                <div className="space-y-6">
-                  <div>
-                    <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Namefield')}  *</label>
-                    <input
-                      type="text"
-                      name="Name"
-                      value={formData.Name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
-                      placeholder="John Doe"
-                    />
-                  </div>
+                <form name="contact" netlify="true" hidden>
+                  <input type="text" name="Name" />
+                  <input type="email" name="email" />
+                  <input type="text" name="subject" />
+                  <textarea name="message"></textarea>
+                </form>
 
-                  <div>
-                    <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Emailfield')} *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
-                      placeholder="john@example.com"
-                    />
-                  </div>
+                <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                  <input type="hidden" name="form-name" value="contact" />
 
-                  <div>
-                    <label className="block text-gray-300 font-semibold mb-2"> {t('contactustab.Subjectfield')} *</label>
-                    <input
-                      type="text"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
-                      placeholder="How can we help you?"
-                    />
-                  </div>
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Namefield')}  *</label>
+                      <input
+                        type="text"
+                        name="Name"
+                        value={formData.Name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                        placeholder="John Doe"
+                      />
+                    </div>
 
-                  <div>
-                    <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Messagefield')} *</label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300 resize-vertical"
-                      placeholder="Tell us more about your project and requirements..."
-                    />
-                  </div>
+                    <div>
+                      <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Emailfield')} *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                        placeholder="john@example.com"
+                      />
+                    </div>
 
-                  <button
-                    onClick={handleSubmit}
-                    disabled={isSubmitting || hasSubmitted}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 shadow-lg hover:shadow-blue-500/25 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        {t('contactustab.sendbutton')}
-                        <Send size={20} />
-                      </>
-                    )}
-                  </button>
-                </div>
+                    <div>
+                      <label className="block text-gray-300 font-semibold mb-2"> {t('contactustab.Subjectfield')} *</label>
+                      <input
+                        type="text"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                        placeholder="How can we help you?"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Messagefield')} *</label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                        rows={5}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300 resize-vertical"
+                        placeholder="Tell us more about your project and requirements..."
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting || hasSubmitted}
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 shadow-lg hover:shadow-blue-500/25 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          {t('contactustab.sendbutton')}
+                          <Send size={20} />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
 
@@ -230,9 +245,12 @@ const ContactUs = () => {
                         <a href="mailto:stan@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
                           stan@agentsify.ai
                         </a>
-                        {/* <a href="mailto:szymon@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
-                          szymon@agentsify.ai
-                        </a> */}
+                        <a href="mailto:kirill@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
+                          kirill@agentsify.ai
+                        </a>
+                        <a href="mailto:szymon@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
+                          karani@agentsify.ai
+                        </a>
                       </div>
                     </div>
                   </div>
