@@ -26,7 +26,7 @@ const ContactUs = () => {
 
   const { t, i18n, ready } = useTranslation('common');
 
-  const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { Name, email, subject, message } = formData;
@@ -62,6 +62,7 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
+      // Create form data that matches the hidden form exactly
       const netlifyFormData = new FormData();
       netlifyFormData.append('form-name', 'contact');
       netlifyFormData.append('Name', Name);
@@ -69,8 +70,8 @@ const ContactUs = () => {
       netlifyFormData.append('subject', subject);
       netlifyFormData.append('message', message);
 
-      // Updated: Submit to the static HTML file instead of root
-      const response = await fetch('/__forms.html', {
+      // Submit to root path, not to __forms.html
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(netlifyFormData).toString()
