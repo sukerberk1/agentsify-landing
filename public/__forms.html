@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Forms</title>
 </head>
+
 <body>
-   <form name="newsletter-subscription" netlify netlify-recaptcha="true" action="/thank-you" method="POST" style="display:none">
-  <input type="hidden" name="form-name" value="newsletter-subscription" />
-  <input type="email" name="email" required />
-  <input type="hidden" name="custom-message" value="A new user has subscribed to the Agentsify AI newsletter!" />
-  <textarea name="admin-notification" style="display: none;">
-New newsletter subscription received:
-Email: {{ email }}
-Date: {{ date }}
-Source: Agentsify AI Website Footer
-  </textarea>
-  <div data-netlify-recaptcha="true"></div>
-</form>
+    <!-- Newsletter Subscription Form -->
+    <form name="newsletter-subscription" netlify hidden>
+        <input type="hidden" name="form-name" value="newsletter-subscription" />
+        <input type="hidden" name="subject"
+  value="News Letter Subscription" data-remove-prefix />
+        <p>
+    <label> Hi, I hope you are doing well.</label>
+  </p>
+       <p>
+    <label> <input type="hidden" name="custom-message" value="A new user has subscribed to the Agentsify AI newsletter!" /> </label>
+  </p>   
+        <input type="email" name="email" />
+       <p>
+    <label> <input type="hidden" name="custom-message" value="Thanks & Regards" /> </label>
+  </p>   
+    </form>
 </body>
 </html>
