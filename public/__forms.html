@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Forms</title>
-</head>
-
-<body>
-  <!-- Newsletter Subscription Form -->
-  <form name="newsletter-subscription" netlify style="display:none">
-    <input type="hidden" name="form-name" value="newsletter-subscription" />
-    <input type="hidden" name="subject" value="Newsletter Subscription - Agentsify AI" />
-    <input type="hidden" name="custom-message" value="A new user has subscribed to the Agentsify AI newsletter! Thanks & Regards." />
-
-    <p>Hi, I hope you are doing well.</p>
-
-    <p>
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required />
-    </p>
-  </form>
-</body>
-
+  <head>
+    <title>Forms</title>
+  </head>
+  <body>
+    <!-- Hidden form for Netlify build-time detection -->
+    <form name="newsletter-subscription" netlify hidden>
+      <input type="hidden" name="form-name" value="newsletter-subscription" />
+      <input type="hidden" name="message" />
+      <input type="hidden" name="email" />
+    </form>
+  </body>
 </html>
