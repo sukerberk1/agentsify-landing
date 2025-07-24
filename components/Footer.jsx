@@ -25,12 +25,17 @@ export default function AgentsifyFooter() {
         setIsLoading(true);
 
         try {
+            // Create form data with all the fields you want in your email
             const formData = new FormData();
             formData.append('form-name', 'newsletter-subscription');
+            formData.append('subject', 'Newsletter Subscription');
+            formData.append('greeting', 'Hi, I hope you are doing well.');
+            formData.append('message', 'A new user has subscribed to the Agentsify AI newsletter!');
             formData.append('email', email);
+            formData.append('closing', 'Thanks & Regards');
 
-            // Updated to use the static HTML file endpoint
-            const response = await fetch('/__forms.html', {
+            // Submit to the root path, not /__forms.html
+            const response = await fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formData).toString()
@@ -100,8 +105,13 @@ export default function AgentsifyFooter() {
                                             name="newsletter-subscription"
                                             onSubmit={handleSubscribe}
                                             className="space-y-2"
+                                            data-netlify="true"
                                         >
                                             <input type="hidden" name="form-name" value="newsletter-subscription" />
+                                            <input type="hidden" name="subject" value="Newsletter Subscription" />
+                                            <input type="hidden" name="greeting" value="Hi, I hope you are doing well." />
+                                            <input type="hidden" name="message" value="A new user has subscribed to the Agentsify AI newsletter!" />
+                                            <input type="hidden" name="closing" value="Thanks & Regards" />
                                             <div className="relative">
                                                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400" />
                                                 <input
