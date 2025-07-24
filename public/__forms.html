@@ -7,8 +7,20 @@
     <!-- Hidden form for Netlify build-time detection -->
     <form name="newsletter-subscription" netlify hidden>
       <input type="hidden" name="form-name" value="newsletter-subscription" />
-      <input type="hidden" name="message" />
+      <input type="hidden" name="Message" />
       <input type="hidden" name="email" />
     </form>
+ 
+    <form name="contact-us" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact-us" />
+    <!-- Define all form fields you’ll submit: -->
+    <input type="text" name="Name" />
+    <input type="email" name="email" />
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+    <input type="hidden" name="formattedMessage" />
+    <input type="text" name="bot-field" />
+  </form>
+    
   </body>
 </html>

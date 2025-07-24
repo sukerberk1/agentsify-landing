@@ -24,13 +24,15 @@ const ContactUs = () => {
     }));
   };
 
-  const { t, i18n } = useTranslation('common');
+  const { t, i18n, ready } = useTranslation('common');
 
+  // Replace handleSubmit to post to Netlify Forms endpoint
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { Name, email, subject, message } = formData;
 
+    // Basic validations
     if (!Name || !email || !subject || !message) {
       setSubmitStatus('error');
       alert(t('contactustab.errortext1'));
@@ -62,17 +64,31 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
-      const netlifyFormData = new FormData();
-      netlifyFormData.append('form-name', 'contact');
-      netlifyFormData.append('Name', Name);
-      netlifyFormData.append('email', email);
-      netlifyFormData.append('subject', subject);
-      netlifyFormData.append('message', message);
+      // Build your custom formatted message as single field content
+      const formattedMessage = [
+        `Hi,`,
+        `You have a new contact form submission.`,
+        ``,
+        `Name: ${Name}`,
+        `Email: ${email}`,
+        `Subject: ${subject}`,
+        `Message:`,
+        `${message}`,
+        ``,
+        `Please follow up accordingly.`,
+        `Thanks & Regards,`,
+        `Your Bot`
+      ].join('\n');
 
-      const response = await fetch('/', {
+      // Prepare URLSearchParams for Netlify POST
+      const params = new URLSearchParams();
+      params.append('form-name', 'contact-us');  // form name MUST match form attribute name!
+      params.append('Message', formattedMessage);
+
+      const response = await fetch('/', {  // Netlify listens on root for form submissions
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(netlifyFormData).toString()
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: params.toString(),
       });
 
       if (response.ok) {
@@ -86,10 +102,12 @@ const ContactUs = () => {
         });
       } else {
         setSubmitStatus('error');
+        alert('Submission failed. Please try again.');
       }
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
+      alert('Submission failed. Please try again.');
     }
 
     setIsSubmitting(false);
@@ -109,6 +127,7 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+
       <section className="relative pt-32 pb-16 px-6 sm:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-blue-900/30"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -124,110 +143,208 @@ const ContactUs = () => {
       <section className="py-16 px-6 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
-            <div className="relative">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
-                <h2 className="text-3xl font-bold text-white mb-2">  {t('contactustab.messageformtitle')}  </h2>
-                <p className="text-gray-300 mb-8">  {t('contactustab.messageformdescription')}  </p>
 
-                {submitStatus === 'success' && (
-                  <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3">
-                    <CheckCircle className="text-green-400" size={20} />
-                    <span className="text-green-300">  {t('contactustab.suceessmessagetext')}   </span>
-                  </div>
-                )}
+            <form
+              name="contact-us"
+              method="POST"
+              data-netlify="true"
+              onSubmit={handleSubmit}
+              className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm"
+            >
+              {/* Netlify hidden inputs */}
+              <input type="hidden" name="form-name" value="contact-us" />
+              <input type="hidden" name="Message" />
 
-                {submitStatus === 'error' && (
-                  <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3">
-                    <AlertCircle className="text-red-400" size={20} />
-                    <span className="text-red-300">  {t('contactustab.errorMessagetext')} </span>
-                  </div>
-                )}
+              <h2 className="text-3xl font-bold text-white mb-2">  {t('contactustab.messageformtitle')}  </h2>
+              <p className="text-gray-300 mb-8">  {t('contactustab.messageformdescription')}  </p>
 
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  onSubmit={handleSubmit}
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3">
+                  <CheckCircle className="text-green-400" size={20} />
+                  <span className="text-green-300">  {t('contactustab.suceessmessagetext')}   </span>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3">
+                  <AlertCircle className="text-red-400" size={20} />
+                  <span className="text-red-300">  {t('contactustab.errorMessagetext')} </span>
+                </div>
+              )}
+
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Namefield')}  *</label>
+                  <input
+                    type="text"
+                    name="Name"
+                    value={formData.Name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                    placeholder="John Doe"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Emailfield')} *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-300 font-semibold mb-2"> {t('contactustab.Subjectfield')} *</label>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                    placeholder="How can we help you?"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Messagefield')} *</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300 resize-vertical"
+                    placeholder="Tell us more about your project and requirements..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting || hasSubmitted}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 shadow-lg hover:shadow-blue-500/25 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Namefield')}  *</label>
-                      <input
-                        type="text"
-                        name="Name"
-                        value={formData.Name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
-                        placeholder="John Doe"
-                      />
-                    </div>
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      {t('contactustab.sendbutton')}
+                      <Send size={20} />
+                    </>
+                  )}
+                </button>
+              </div>
+            </form>
 
-                    <div>
-                      <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Emailfield')} *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
-                        placeholder="john@example.com"
-                      />
+            {/* The right side info panel remains unchanged */}
+            <div className="space-y-8">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
+                <h2 className="text-2xl font-bold text-white mb-6">  {t('contactustab.reachouttext')}  </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="text-white" size={20} />
                     </div>
-
                     <div>
-                      <label className="block text-gray-300 font-semibold mb-2"> {t('contactustab.Subjectfield')} *</label>
-                      <input
-                        type="text"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
-                        placeholder="How can we help you?"
-                      />
+                      <h3 className="text-white font-semibold mb-1">   {t('contactustab.emailtext')}  </h3>
+                      <div className="space-y-1">
+                        <a href="mailto:stan@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
+                          stan@agentsify.ai
+                        </a>
+                        <a href="mailto:kirill@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
+                          kirill@agentsify.ai
+                        </a>
+                        <a href="mailto:szymon@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
+                          karani@agentsify.ai
+                        </a>
+                      </div>
                     </div>
-
-                    <div>
-                      <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Messagefield')} *</label>
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                        rows={5}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300 resize-vertical"
-                        placeholder="Tell us more about your project and requirements..."
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting || hasSubmitted}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 shadow-lg hover:shadow-blue-500/25 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          {t('contactustab.sendbutton')}
-                          <Send size={20} />
-                        </>
-                      )}
-                    </button>
                   </div>
-                </form>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <PhoneCall className="text-white" size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold mb-1">  {t('contactustab.scheuldeacall')}     </h3>
+                      <button
+                        onClick={openCalModal}
+                        className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center gap-2"
+                      >
+                        <Calendar size={16} />
+                        {t('contactustab.bookacall')}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="text-white" size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold mb-1">  {t('contactustab.locationtext')}  </h3>
+                      <p className="text-gray-300 text-sm">  {t('contactustab.locationpara')}  </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
+                <h2 className="text-2xl font-bold text-white mb-6"> {t('contactustab.whychooseAgentsifytext')}  </h2>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
+                      <Headphones className="text-white" size={16} />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">{t('contactustab.Supporttext')}</p>
+                      <p className="text-gray-300 text-sm">{t('contactustab.Supportpara')}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                      <Zap className="text-white" size={16} />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold"> {t('contactustab.quicktext')}   </p>
+                      <p className="text-gray-300 text-sm"> {t('contactustab.quickpara')}  </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                      <Shield className="text-white" size={16} />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">  {t('contactustab.securitytext')}   </p>
+                      <p className="text-gray-300 text-sm"> {t('contactustab.securitypara')}    </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
+                      <Star className="text-white" size={16} />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">   {t('contactustab.ratingtext')}  </p>
+                      <p className="text-gray-300 text-sm">  {t('contactustab.ratingpara')}  </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Right side content untouched */}
-            {/* ... rest of your existing right content */}
-            {/* ... (no need to paste full unchanged content here for brevity) */}
           </div>
         </div>
       </section>

@@ -12,7 +12,6 @@ export default function AgentsifyFooter() {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
 
-  // SUBMIT HANDLER WITH CUSTOM NETLIFY EMAIL BODY
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email) return;
@@ -29,9 +28,8 @@ export default function AgentsifyFooter() {
       const params = new URLSearchParams();
       params.append("form-name", "newsletter-subscription");
 
-      // The exact message you want, as one field
       params.append(
-        "message",
+        "Message",
         [
           "Hi,",
           "I hope you are doing well.",
@@ -39,12 +37,9 @@ export default function AgentsifyFooter() {
           `Email of the new subscriber is: ${email}`,
           "Please make sure to add it to News Letters Subscription.",
           "Thanks & Regards,",
-          "Your Bot",
+          "Your Netlify Bot",
         ].join("\n")
       );
-
-      // Optionally also include the email as a separate field, for easier filtering/searching in Netlify dashboard
-      params.append("email", email);
 
       const response = await fetch("/__forms.html", {
         method: "POST",
