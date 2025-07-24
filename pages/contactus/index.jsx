@@ -84,6 +84,7 @@ const ContactUs = () => {
       const params = new URLSearchParams();
       params.append('form-name', 'contact-us');  // form name MUST match form attribute name!
       params.append('Message', formattedMessage);
+      params.append('bot-field', '');
 
       const response = await fetch('/', {  // Netlify listens on root for form submissions
         method: 'POST',
@@ -149,11 +150,13 @@ const ContactUs = () => {
               method="POST"
               data-netlify="true"
               onSubmit={handleSubmit}
+              netlify-honeypot="bot-field"
               className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm"
             >
               {/* Netlify hidden inputs */}
-              <input type="hidden" name="form-name" value="contact-us" />
-              <input type="hidden" name="Message" />
+<input type="hidden" name="form-name" value="contact-us" />
+  <input type="hidden" name="Message" />
+  <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
 
               <h2 className="text-3xl font-bold text-white mb-2">  {t('contactustab.messageformtitle')}  </h2>
               <p className="text-gray-300 mb-8">  {t('contactustab.messageformdescription')}  </p>
