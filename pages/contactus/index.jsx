@@ -26,7 +26,7 @@ const ContactUs = () => {
 
   const { t, i18n, ready } = useTranslation('common');
 
-  // Replace handleSubmit to post to Netlify Forms endpoint
+  // Fixed handleSubmit function
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -80,16 +80,19 @@ const ContactUs = () => {
         `Your Bot`
       ].join('\n');
 
-      // Prepare URLSearchParams for Netlify POST
-      const params = new URLSearchParams();
-      params.append('form-name', 'contact-us');  // form name MUST match form attribute name!
-      params.append('Message', formattedMessage);
-      params.append('bot-field', '');
+      // Create FormData object for proper Netlify form submission
+      const formDataToSubmit = new FormData();
+      formDataToSubmit.append('form-name', 'contact-us');
+      formDataToSubmit.append('Name', Name);
+      formDataToSubmit.append('email', email);
+      formDataToSubmit.append('subject', subject);
+      formDataToSubmit.append('message', message);
+      formDataToSubmit.append('Message', formattedMessage); // Your custom formatted message
+      formDataToSubmit.append('bot-field', ''); // honeypot field
 
-      const response = await fetch('/', {  // Netlify listens on root for form submissions
+      const response = await fetch('/', {
         method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: params.toString(),
+        body: formDataToSubmit,
       });
 
       if (response.ok) {
@@ -154,9 +157,8 @@ const ContactUs = () => {
               className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm"
             >
               {/* Netlify hidden inputs */}
-<input type="hidden" name="form-name" value="contact-us" />
-  <input type="hidden" name="Message" />
-  <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
+              <input type="hidden" name="form-name" value="contact-us" />
+              <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
 
               <h2 className="text-3xl font-bold text-white mb-2">  {t('contactustab.messageformtitle')}  </h2>
               <p className="text-gray-300 mb-8">  {t('contactustab.messageformdescription')}  </p>
