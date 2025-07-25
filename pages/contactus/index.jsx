@@ -100,7 +100,7 @@ const ContactUs = () => {
     params.append('formatted-message', formattedMessage); // Add formatted message
     params.append('bot-field', ''); // Include honeypot field
 
-    const response = await fetch('/', {
+    const response = await fetch('/__forms.html', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: params.toString(),
