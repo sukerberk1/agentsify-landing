@@ -74,61 +74,65 @@ const ContactUs = () => {
 
     setIsSubmitting(true);
 
-    try {
+   try {
+    // Create the formatted email message
+    const formattedMessage = [
+      "Hi,",
+      "I hope you are doing well.",
+      "A new user has tried to contact you for Agentsify AI !",
+      "Here are the details:",
+      `Name: ${Name}`,
+      `Email: ${email}`,
+      `Subject: ${subject}`,
+      `Message: ${message}`,
+      "Please reach out to them as soon as possible.",
+      "Thanks & Regards,",
+      "Your Netlify Bot",
+    ].join("\n");
 
-      const params = new URLSearchParams();
+    // Create form data with both individual fields AND formatted message
+    const params = new URLSearchParams();
+    params.append('form-name', 'contact-us');
+    params.append('Name', Name);
+    params.append('email', email);
+    params.append('subject', subject);
+    params.append('message', message);
+    params.append('formatted-message', formattedMessage); // Add formatted message
+    params.append('bot-field', ''); // Include honeypot field
 
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString(),
+    });
 
-      params.append('form-name', 'contact-us');
-      params.append(
-        "Submission Details:",
-        [
-          "Hi,",
-          "I hope you are doing well.",
-          "A new user has tried to contact you for Agentsify AI !",
-          "Here are the details:",
-          `Name: ${Name}`,
-          `Email: ${email}`,
-          `Subject: ${subject}`,
-          `Message: ${message}`,
-          "Please reach out to them as soon as possible.",
-          "Thanks & Regards,",
-          "Your Netlify Bot",
-        ].join("\n")
-      );
-
-      const response = await fetch('/__forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: params.toString(),
+    if (response.ok) {
+      setHasSubmitted(true);
+      setSubmitStatus('success');
+      setFormData({
+        Name: '',
+        email: '',
+        subject: '',
+        message: '',
+        'bot-field': '',
       });
-
-      if (response.ok) {
-        setHasSubmitted(true);
-        setSubmitStatus('success');
-        setFormData({
-          Name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-      } else {
-        setSubmitStatus('error');
-        alert('Submission failed. Please try again.');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
+    } else {
       setSubmitStatus('error');
       alert('Submission failed. Please try again.');
     }
+  } catch (error) {
+    console.error('Form submission error:', error);
+    setSubmitStatus('error');
+    alert('Submission failed. Please try again.');
+  }
 
-    setIsSubmitting(false);
+  setIsSubmitting(false);
 
-    setTimeout(() => {
-      setSubmitStatus(null);
-    }, 5000);
-  };
-
+  setTimeout(() => {
+    setSubmitStatus(null);
+  }, 5000);
+};
+  
   const openCalModal = () => {
     setIsCalModalOpen(true);
   };
