@@ -90,7 +90,7 @@ Before deploying, you need to add your required environment variables:
 | `Subject line for Contact Form      ` | `A New User has Contacted you`    |
 | `Email `                              | `Respective Email Address`        |
 
-> This step is **required** if your project uses services like Resend for email or any serverless functions.
+> This step is **required** since my project uses services like Netlify Forms.
 
 ### 4. Deploy Your Site
 
