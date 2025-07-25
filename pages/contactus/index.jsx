@@ -76,13 +76,31 @@ const ContactUs = () => {
 
     try {
 
+      const params = new URLSearchParams();
+
+
+      params.append('form-name', 'contact-us');
+      params.append(
+        "Submission Details:",
+        [
+          "Hi,",
+          "I hope you are doing well.",
+          "A new user has tried to contact you for Agentsify AI !",
+          "Here are the details:",
+          `Name: ${Name}`,
+          `Email: ${email}`,
+          `Subject: ${subject}`,
+          `Message: ${message}`,
+          "Please reach out to them as soon as possible.",
+          "Thanks & Regards,",
+          "Your Netlify Bot",
+        ].join("\n")
+      );
+
       const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact-us',
-          ...formData,
-        }),
+        body: params.toString(),
       });
 
       if (response.ok) {
