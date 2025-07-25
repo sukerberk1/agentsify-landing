@@ -22,6 +22,7 @@ const ContactUs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
