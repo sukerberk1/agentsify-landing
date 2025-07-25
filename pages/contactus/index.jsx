@@ -93,10 +93,6 @@ const ContactUs = () => {
     // Create form data with both individual fields AND formatted message
     const params = new URLSearchParams();
     params.append('form-name', 'contact-us');
-    params.append('Name', Name);
-    params.append('email', email);
-    params.append('subject', subject);
-    params.append('message', message);
     params.append('formatted-message', formattedMessage); // Add formatted message
     params.append('bot-field', ''); // Include honeypot field
 
