@@ -26,7 +26,7 @@ const ContactUs = () => {
 
   const { t, i18n, ready } = useTranslation('common');
 
-  // Fixed handleSubmit function
+  // Updated handleSubmit function with proper Netlify form handling
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -64,31 +64,8 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
-      // Build your custom formatted message as single field content
-      const formattedMessage = [
-        `Hi,`,
-        `You have a new contact form submission.`,
-        ``,
-        `Name: ${Name}`,
-        `Email: ${email}`,
-        `Subject: ${subject}`,
-        `Message:`,
-        `${message}`,
-        ``,
-        `Please follow up accordingly.`,
-        `Thanks & Regards,`,
-        `Your Bot`
-      ].join('\n');
-
-      // Create FormData object for proper Netlify form submission
-      const formDataToSubmit = new FormData();
-      formDataToSubmit.append('form-name', 'contact-us');
-      formDataToSubmit.append('Name', Name);
-      formDataToSubmit.append('email', email);
-      formDataToSubmit.append('subject', subject);
-      formDataToSubmit.append('message', message);
-      formDataToSubmit.append('Message', formattedMessage); // Your custom formatted message
-      formDataToSubmit.append('bot-field', ''); // honeypot field
+      // Create form data for Netlify submission
+      const formDataToSubmit = new FormData(e.target);
 
       const response = await fetch('/', {
         method: 'POST',
@@ -136,7 +113,7 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-blue-900/30"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            {t('contactustab.contactusheadingpart1')}  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> {t('contactustab.contactusheadingpart2')}</span>
+            {t('contactustab.contactusheadingpart1')} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{t('contactustab.contactusheadingpart2')}</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             {t('contactustab.contactuspara')}
@@ -152,34 +129,34 @@ const ContactUs = () => {
               name="contact-us"
               method="POST"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
-              netlify-honeypot="bot-field"
               className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm"
             >
               {/* Netlify hidden inputs */}
               <input type="hidden" name="form-name" value="contact-us" />
-              <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
+              <input type="text" name="bot-field" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
-              <h2 className="text-3xl font-bold text-white mb-2">  {t('contactustab.messageformtitle')}  </h2>
-              <p className="text-gray-300 mb-8">  {t('contactustab.messageformdescription')}  </p>
+              <h2 className="text-3xl font-bold text-white mb-2">{t('contactustab.messageformtitle')}</h2>
+              <p className="text-gray-300 mb-8">{t('contactustab.messageformdescription')}</p>
 
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3">
                   <CheckCircle className="text-green-400" size={20} />
-                  <span className="text-green-300">  {t('contactustab.suceessmessagetext')}   </span>
+                  <span className="text-green-300">{t('contactustab.suceessmessagetext')}</span>
                 </div>
               )}
 
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3">
                   <AlertCircle className="text-red-400" size={20} />
-                  <span className="text-red-300">  {t('contactustab.errorMessagetext')} </span>
+                  <span className="text-red-300">{t('contactustab.errorMessagetext')}</span>
                 </div>
               )}
 
               <div className="space-y-6">
                 <div>
-                  <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Namefield')}  *</label>
+                  <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Namefield')} *</label>
                   <input
                     type="text"
                     name="Name"
@@ -205,7 +182,7 @@ const ContactUs = () => {
                 </div>
 
                 <div>
-                  <label className="block text-gray-300 font-semibold mb-2"> {t('contactustab.Subjectfield')} *</label>
+                  <label className="block text-gray-300 font-semibold mb-2">{t('contactustab.Subjectfield')} *</label>
                   <input
                     type="text"
                     name="subject"
@@ -250,17 +227,17 @@ const ContactUs = () => {
               </div>
             </form>
 
-            {/* The right side info panel remains unchanged */}
+            {/* Right side info panel */}
             <div className="space-y-8">
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
-                <h2 className="text-2xl font-bold text-white mb-6">  {t('contactustab.reachouttext')}  </h2>
+                <h2 className="text-2xl font-bold text-white mb-6">{t('contactustab.reachouttext')}</h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="text-white" size={20} />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold mb-1">   {t('contactustab.emailtext')}  </h3>
+                      <h3 className="text-white font-semibold mb-1">{t('contactustab.emailtext')}</h3>
                       <div className="space-y-1">
                         <a href="mailto:stan@agentsify.ai" className="text-blue-400 hover:text-blue-300 transition-colors block">
                           stan@agentsify.ai
@@ -280,7 +257,7 @@ const ContactUs = () => {
                       <PhoneCall className="text-white" size={20} />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold mb-1">  {t('contactustab.scheuldeacall')}     </h3>
+                      <h3 className="text-white font-semibold mb-1">{t('contactustab.scheuldeacall')}</h3>
                       <button
                         onClick={openCalModal}
                         className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center gap-2"
@@ -296,15 +273,15 @@ const ContactUs = () => {
                       <MapPin className="text-white" size={20} />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold mb-1">  {t('contactustab.locationtext')}  </h3>
-                      <p className="text-gray-300 text-sm">  {t('contactustab.locationpara')}  </p>
+                      <h3 className="text-white font-semibold mb-1">{t('contactustab.locationtext')}</h3>
+                      <p className="text-gray-300 text-sm">{t('contactustab.locationpara')}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
-                <h2 className="text-2xl font-bold text-white mb-6"> {t('contactustab.whychooseAgentsifytext')}  </h2>
+                <h2 className="text-2xl font-bold text-white mb-6">{t('contactustab.whychooseAgentsifytext')}</h2>
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -322,8 +299,8 @@ const ContactUs = () => {
                       <Zap className="text-white" size={16} />
                     </div>
                     <div>
-                      <p className="text-white font-semibold"> {t('contactustab.quicktext')}   </p>
-                      <p className="text-gray-300 text-sm"> {t('contactustab.quickpara')}  </p>
+                      <p className="text-white font-semibold">{t('contactustab.quicktext')}</p>
+                      <p className="text-gray-300 text-sm">{t('contactustab.quickpara')}</p>
                     </div>
                   </div>
 
@@ -332,8 +309,8 @@ const ContactUs = () => {
                       <Shield className="text-white" size={16} />
                     </div>
                     <div>
-                      <p className="text-white font-semibold">  {t('contactustab.securitytext')}   </p>
-                      <p className="text-gray-300 text-sm"> {t('contactustab.securitypara')}    </p>
+                      <p className="text-white font-semibold">{t('contactustab.securitytext')}</p>
+                      <p className="text-gray-300 text-sm">{t('contactustab.securitypara')}</p>
                     </div>
                   </div>
 
@@ -342,8 +319,8 @@ const ContactUs = () => {
                       <Star className="text-white" size={16} />
                     </div>
                     <div>
-                      <p className="text-white font-semibold">   {t('contactustab.ratingtext')}  </p>
-                      <p className="text-gray-300 text-sm">  {t('contactustab.ratingpara')}  </p>
+                      <p className="text-white font-semibold">{t('contactustab.ratingtext')}</p>
+                      <p className="text-gray-300 text-sm">{t('contactustab.ratingpara')}</p>
                     </div>
                   </div>
                 </div>
