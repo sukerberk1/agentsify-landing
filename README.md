@@ -61,7 +61,7 @@ Visit http://localhost:3000 to view it in your browser.
 - Ensure your repo includes essential files like:
   - `package.json`
   - `next.config.js`
-  - `netlify.toml` (optional, but recommended)
+  -  `/__forms.html`
   - Your code and component structure
 
 
@@ -73,71 +73,34 @@ Visit http://localhost:3000 to view it in your browser.
 4. Select the repository you just created
 
 
-### 3.Add Environment Variables (Before First Deploy)
+### 3. Form Notifications in Netlify (Before First Deploy)
 
 Before deploying, you need to add your required environment variables:
 
 1. In your Netlify dashboard, go to:
-   **Site Settings → Environment Variables**
-2. Click **“Add a variable”**
+   **Site Settings → Forms → Tab Forms Submission Notifications**
+2. Click **“Add Notification”**
 3. Add the following:
 
-| Key              | Value                        |
-| ---------------- | ---------------------------- |
-| `RESEND_API_KEY` | `your_actual_resend_api_key` |
+| Key                                   | Value                             |
+| ------------------------------------- | --------------------------------- |
+| `Form `                               | `Contact Us or News Letter Form`  |
+| `Form `                               | `Contact Us or News Letter Form`  |
+| `Subject line for News Subscription ` | `News Letter Subscription by User`|
+| `Subject line for Contact Form      ` | `A New User has Contacted you`    |
+| `Email `                              | `Respective Email Address`        |
 
 > This step is **required** if your project uses services like Resend for email or any serverless functions.
-
 
 ### 4. Deploy Your Site
 
 - Netlify will now install dependencies, build your project, and deploy it live 🚀
 - All future GitHub commits to the connected branch will trigger automatic redeploys
 
-
-##  📤 Setting Up Resend Email Service
-
-To enable email sending (e.g. from the contact form), this project uses [Resend](https://resend.com) — a developer-friendly email API.
-
-
-## Steps to Create a Resend Account and Get Your API Key
-
-1. **Sign Up for Resend**
-   - Visit [https://resend.com](https://resend.com)
-   - Create an account (free plan available)
-
-2. **Verify Your Domain (Optional but Recommended)**
-   - Go to the **"Domains"** section in Resend
-   - Add your domain and follow the DNS instructions if you want to send emails from your own domain (e.g., `you@yourdomain.com`)
-   - Or skip this to use Resend’s default domain for testing
-
-3. **Get Your API Key**
-   - Navigate to **API Keys** in the Resend dashboard
-   - Click **"Create API Key"**
-   - Give it a name like `"Netlify Contact Form"`
-   - Copy the key (you won’t see it again!)
-
-
-## 🔐 Add the API Key to Netlify
-
-Before deploying your site:
-
-1. Go to your project in Netlify
-2. Navigate to **Site Settings → Environment Variables**
-3. Add the following variable:
-
-| Key              | Value               |
-| ---------------- | ------------------- |
-| `RESEND_API_KEY` | `your-api-key-here` |
-
-
 ## Using the API
 
-This project uses a Netlify Function (`/netlify/functions/send-email`) to send emails via the Resend API. You don’t need to configure anything else — just ensure the environment variable is set.
-
- 📌 You can find more on Resend’s docs here: [https://resend.com/docs](https://resend.com/docs)
-
+This project uses a Netlify Forms Function by default to send emails via the Resend API. You don’t need to configure anything else — just ensure the environment variable is set.
+Below is the API Link, ([https://docs.netlify.com/manage/forms/setup/](https://docs.netlify.com/manage/forms/setup/)
 
 ## 📄 License
-
 © 2025 Agentsify AI. All rights reserved.
