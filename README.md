@@ -100,7 +100,7 @@ Before deploying, you need to add your required environment variables:
 ## Using the API
 
 This project uses a Netlify Forms Function by default to send emails via the Resend API. You don’t need to configure anything else — just ensure the environment variable is set.
-Below is the API Link, ([https://docs.netlify.com/manage/forms/setup/])(https://docs.netlify.com/manage/forms/setup/)
+Below is the API Link, [https://docs.netlify.com/manage/forms/setup/]
 
 ## 📄 License
 © 2025 Agentsify AI. All rights reserved.
